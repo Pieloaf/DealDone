@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1582837182 source:/home/ryan/Documents/DealDone/DealDone/src/Vehicle.cpp
+	"Vehicle.h"
+
+1582837125 /home/ryan/Documents/DealDone/DealDone/include/Vehicle.h
+	<vector>
+	<string>
+	<iostream>
+	"Manufacturer.h"
+
+1582837237 source:/home/ryan/Documents/DealDone/DealDone/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+	"Manufacturer.h"
+
+1582837105 /home/ryan/Documents/DealDone/DealDone/include/Manufacturer.h
+	<vector>
+	<string>
+	<iostream>
+
+1582837105 source:/home/ryan/Documents/DealDone/DealDone/src/Manufacturer.cpp
+	"Manufacturer.h"
+
+1582837105 source:/home/piercel/Documents/DealDone (copy)/src/Manufacturer.cpp
+	"Manufacturer.h"
+
+1582837105 /home/piercel/Documents/DealDone (copy)/include/Manufacturer.h
+	<vector>
+	<string>
+	<iostream>
+
+1582837182 source:/home/piercel/Documents/DealDone (copy)/src/Vehicle.cpp
+	"Vehicle.h"
+
+1582837125 /home/piercel/Documents/DealDone (copy)/include/Vehicle.h
+	<vector>
+	<string>
+	<iostream>
+	"Manufacturer.h"
+
+1582893145 source:/home/piercel/Documents/DealDone (copy)/src/User.cpp
+	"User.h"
+
+1582893111 /home/piercel/Documents/DealDone (copy)/include/User.h
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+
+1582892235 /home/piercel/Documents/DealDone (copy)/include/StoreManager.h
+	<iostream>
+	<vector>
+	<string>
+	<User.h>
+
+1582883687 source:/home/piercel/Documents/DealDone (copy)/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+	"Manufacturer.h"
+	"User.h"
+	"StoreManager.h"
+
+1582893255 source:/home/piercel/Documents/DealDone (copy)/src/StoreManager.cpp
+	"StoreManager.h"
+

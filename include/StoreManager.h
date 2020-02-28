@@ -1,19 +1,32 @@
 #ifndef STOREMANAGER_H
 #define STOREMANAGER_H
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <User.h>
+
 class StoreManager : public User
 {
-   public:
-        StoreManager();
-        virtual ~StoreManager();
-        void setlistedVehicles( val=vector<Vehicle> ){ listedVehicles=val; }
-        vector<Vehicle> getlistedVehicles(){ return listedVehicles; }
-        void setstore_name( val=std::string ){ store_name=val; }
-        std::string getstore_name(){ return store_name; }
-        void setdescription( val=std::string ){ description=val; }
-        std::string getdescription(){ return description; }
+     public:
+          StoreManager();
+          virtual ~StoreManager();
+
+          void getListedVehicles();
+          void newVehicle(Vehicle v){ listedVehicles.push_back(v); };
+          void removeVehicle(int i);
+
+          void setstore_name( std::string val ){ store_name=val; }
+          std::string getstore_name(){ return store_name; }
+
+          void setdescription( std::string val ){ description=val; }
+          std::string getdescription(){ return description; }
+
+
+
    protected:
    private:
-        vector<Vehicle> listedVehicles;
+        std::vector<Vehicle> listedVehicles;
         std::string store_name;
         std::string description;
 };
