@@ -4,8 +4,11 @@
 
 #include "Vehicle.h"
 #include "Manufacturer.h"
+<<<<<<< HEAD
 #include "User.h"
 #include "StoreManager.h"
+=======
+>>>>>>> e8fff7b17445cd6dbca89b98d0423736b868d371
 
 using namespace std;
 
