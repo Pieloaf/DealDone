@@ -9,25 +9,30 @@
 class StoreManager : public User
 {
      public:
+          
           StoreManager();
+          StoreManager(std::string uname, std::string sname);
           virtual ~StoreManager();
 
-          void getListedVehicles();
-          void newVehicle(Vehicle v){ listedVehicles.push_back(v); };
+          void displayListedVehicles();
+          void addVehicle(Vehicle v){ listedVehicles.push_back(v); };
           void removeVehicle(int i);
 
-          void setstore_name( std::string val ){ store_name=val; }
-          std::string getstore_name(){ return store_name; }
+          void setStoreName( std::string val ){ storeName=val; }
+          std::string getStoreName(){ return storeName; }
 
-          void setdescription( std::string val ){ description=val; }
-          std::string getdescription(){ return description; }
+          void setDescription( std::string val ){ description=val; }
+          std::string getDescription(){ return description; }
+          
+          //int getNumStores(){return numStores;}  
+          //void incNumStores(){numStores++;}        
+     protected:
 
-
-
-   protected:
-   private:
-        std::vector<Vehicle> listedVehicles;
-        std::string store_name;
-        std::string description;
+     private:
+          static int numStores;
+          //int numStores=10;
+          std::vector<Vehicle> listedVehicles;
+          std::string storeName;
+          std::string description;
 };
 #endif

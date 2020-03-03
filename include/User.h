@@ -10,6 +10,7 @@ class User
 {
    public:
         User();
+        User(std::string usrname);
         virtual ~User();
 
         void setName( std::string val ){ name=val; }

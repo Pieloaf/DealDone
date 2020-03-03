@@ -40,22 +40,22 @@
 	<iostream>
 	"Manufacturer.h"
 
-1582893145 source:/home/piercel/Documents/DealDone (copy)/src/User.cpp
+1583226142 source:/home/piercel/Documents/DealDone (copy)/src/User.cpp
 	"User.h"
 
-1582893111 /home/piercel/Documents/DealDone (copy)/include/User.h
+1583224720 /home/piercel/Documents/DealDone (copy)/include/User.h
 	<iostream>
 	<string>
 	<vector>
 	"Vehicle.h"
 
-1582892235 /home/piercel/Documents/DealDone (copy)/include/StoreManager.h
+1583250499 /home/piercel/Documents/DealDone (copy)/include/StoreManager.h
 	<iostream>
 	<vector>
 	<string>
 	<User.h>
 
-1582883687 source:/home/piercel/Documents/DealDone (copy)/main.cpp
+1583244116 source:/home/piercel/Documents/DealDone (copy)/main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -64,6 +64,6 @@
 	"User.h"
 	"StoreManager.h"
 
-1582893255 source:/home/piercel/Documents/DealDone (copy)/src/StoreManager.cpp
+1583249576 source:/home/piercel/Documents/DealDone (copy)/src/StoreManager.cpp
 	"StoreManager.h"
 
