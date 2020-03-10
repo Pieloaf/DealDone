@@ -4,15 +4,19 @@ Vehicle::Vehicle()
 {
     //ctor
 }
-Vehicle::Vehicle(Manufacturer m){
-    vehicle_manu = m;
+Vehicle::Vehicle(Manufacturer m): vehicle_manu(m){ // initialliser list
 }
 Vehicle::~Vehicle()
 {
-    //dtor
+
+}
+
+void Vehicle::setVehicleManu(Manufacturer m){
+    vehicle_manu = m;
 }
 
 void Vehicle::displayVehicleDetails(){
+
     cout << "***" << endl;
     cout << "Vehicle Name: " << model_name << endl;
     cout << "Manufacturer: " << vehicle_manu.getName() << endl;
@@ -23,3 +27,4 @@ void Vehicle::displayVehicleDetails(){
     cout << "Description:" << description << endl;
     cout << "***" << endl;
 }
+

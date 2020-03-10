@@ -22,7 +22,7 @@ int main()
     v2.setModel_Name("Avensis");
 
     v1.displayVehicleDetails();
-    
+
     StoreManager s1("John", "John's Motors");
     s1.addVehicle(v1);
     s1.addVehicle(v2);

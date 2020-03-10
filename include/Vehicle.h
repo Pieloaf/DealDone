@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Manufacturer.h"
+#include "Vehicle.h"
 
 using std::string;
 using std::vector;
@@ -15,16 +16,18 @@ using std::endl;
 class Vehicle
 {
     public:
+        // default constructors
         Vehicle();
-        Vehicle(Manufacturer m);
         virtual ~Vehicle();
+        //user defined constructors
+        Vehicle(Manufacturer m);
 
+        /// Function Declarations
         // Generated Accessors and Mutators
         int getPrice() { return price; }
         void setPrice(int val) { price = val; }
         int getSeats() { return seats; }
         void setSeats(int val) { seats = val; }
-        void setVehicleColour(string val) { vehicle_colour = val; }
         string getVehicleColour() { return vehicle_colour; }
         float getLength() { return length; }
         void setLength(float val) { length = val; }
@@ -37,26 +40,29 @@ class Vehicle
         string getModel_Name() { return model_name; }
         void setModel_Name(string val) { model_name = val; }
 
-        // Custom Accessor and Mutators
+        // User Defined Accessor and Mutators
+        void setVehicleManu(Manufacturer m1);
 
-        // Custom Functions
-
+        // User Defined Functions
         void displayVehicleDetails();
 
     protected:
 
     private:
-        // default data types
+        /// Variables
+        // simple data types
         int price;
         int seats;
-        string vehicle_colour;
         float length;
         float width;
         float weight;
         string description;
         string model_name;
 
-        // custom data types
+        // constants
+        string vehicle_colour;
+
+        // complex data types
         Manufacturer vehicle_manu;
 
 };

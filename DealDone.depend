@@ -67,3 +67,60 @@
 1583249576 source:/home/piercel/Documents/DealDone (copy)/src/StoreManager.cpp
 	"StoreManager.h"
 
+1583849583 source:/home/ryan/Downloads/DealDone-master/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+	"Manufacturer.h"
+	"User.h"
+	"StoreManager.h"
+
+1583849721 /home/ryan/Downloads/DealDone-master/include/Vehicle.h
+	<vector>
+	<string>
+	<iostream>
+	"Manufacturer.h"
+	"Vehicle.h"
+
+1583170796 /home/ryan/Downloads/DealDone-master/include/Manufacturer.h
+	<vector>
+	<string>
+	<iostream>
+
+1583829955 /home/ryan/Downloads/DealDone-master/include/User.h
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+
+1583829955 /home/ryan/Downloads/DealDone-master/include/StoreManager.h
+	<iostream>
+	<vector>
+	<string>
+	<User.h>
+
+1583170796 source:/home/ryan/Downloads/DealDone-master/src/Manufacturer.cpp
+	"Manufacturer.h"
+
+1583829955 source:/home/ryan/Downloads/DealDone-master/src/StoreManager.cpp
+	"StoreManager.h"
+
+1583829955 source:/home/ryan/Downloads/DealDone-master/src/User.cpp
+	"User.h"
+
+1583849689 source:/home/ryan/Downloads/DealDone-master/src/Vehicle.cpp
+	"Vehicle.h"
+
+1583849769 source:/home/ryan/Downloads/DealDone-master/src/Air_Vehicle.cpp
+	"Air_Vehicle.h"
+
+1583849769 /home/ryan/Downloads/DealDone-master/include/Air_Vehicle.h
+	<Vehicle.h>
+
+1583849769 source:/home/ryan/Downloads/DealDone-master/src/Land_Vehicle.cpp
+	"Land_Vehicle.h"
+
+1583849769 /home/ryan/Downloads/DealDone-master/include/Land_Vehicle.h
+	<Vehicle.h>
+
