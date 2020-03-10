@@ -1,13 +1,7 @@
 #include "User.h"
 
-User::User()
+User::User(std::string usrname):name(usrname)	
 {
-
-}
-
-User::User(std::string usrname)	
-{
-	name = usrname;
 }
 
 User::~User()

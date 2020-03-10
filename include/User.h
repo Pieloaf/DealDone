@@ -9,11 +9,11 @@
 class User
 {
    public:
-        User();
+//        User();
         User(std::string usrname);
         virtual ~User();
 
-        void setName( std::string val ){ name=val; }
+        //void setName( std::string val ){ name=val; }
         std::string getName(){ return name; }
 
         void myVehicles();
@@ -24,7 +24,7 @@ class User
    protected:
 
    private:
-        std::string name;
+        const std::string name;
         vector<Vehicle> ownedVehicles;
 };
 #endif

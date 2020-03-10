@@ -6,10 +6,10 @@ StoreManager::StoreManager(std::string usrname, std::string sname):User(usrname)
     StoreManager::setStoreName(sname);
     numStores++;
 }
-StoreManager::StoreManager()
+/*StoreManager::StoreManager()
 {
     //numStores++;
-}
+}*/
 
 StoreManager::~StoreManager()
 {

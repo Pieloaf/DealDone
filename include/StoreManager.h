@@ -10,7 +10,7 @@ class StoreManager : public User
 {
      public:
           
-          StoreManager();
+//          StoreManager();
           StoreManager(std::string uname, std::string sname);
           virtual ~StoreManager();
 

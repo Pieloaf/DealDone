@@ -18,7 +18,7 @@ void Manufacturer::addColour(string colour_name){
 
 void Manufacturer::removeColour(string colour_name){
 
-    for(int i = 0; i < colour_list.size(); i++){
+    for(int i = 0; i < int(colour_list.size()); i++){
         if (colour_list[i] == colour_name){
             colour_list.erase(colour_list.begin() + i);
         }
@@ -26,7 +26,7 @@ void Manufacturer::removeColour(string colour_name){
 }
 
 void Manufacturer::listColours(){
-    for(int i = 0; i < colour_list.size(); i++){
+    for(int i = 0; i < int(colour_list.size()); i++){
         cout << colour_list[i] << endl;
     }
 }
