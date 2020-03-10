@@ -21,12 +21,14 @@ class Land_Vehicle : public Vehicle
         void setTransmission(string val) { transmission = val; }
         int getDoors() { return doors; }
         void setDoors(int val) { doors = val; }
-
+        int getMileage() { return mileage; }
+        void setMilage(int val) { mileage = val; }
         // User Defined Accessors and Mutators
 
         // User Defined Functions
 
         // Overwritten Functions
+        void displayVehicleBasics();
         void displayVehicleDetails();
 
     protected:
@@ -34,6 +36,7 @@ class Land_Vehicle : public Vehicle
     private:
         string transmission;
         int doors;
+        int mileage;
 };
 
 #endif // LAND_VEHICLE_H

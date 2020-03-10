@@ -5,6 +5,8 @@
 #include <string>
 #include <iostream>
 
+#include "Colours.h"
+
 using std::string;
 using std::vector;
 using std::cout;
@@ -33,6 +35,8 @@ class Manufacturer
         // User Defined Functions
         void listColours();
         void manuDetails();
+
+
 
     protected:
 

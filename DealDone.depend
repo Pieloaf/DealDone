@@ -124,3 +124,64 @@
 1583849769 /home/ryan/Downloads/DealDone-master/include/Land_Vehicle.h
 	<Vehicle.h>
 
+1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/Manufacturer.cpp
+	"Manufacturer.h"
+
+1583852946 /home/ryan/Documents/DealDone-WIP/DealDone/include/Manufacturer.h
+	<vector>
+	<string>
+	<iostream>
+
+1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/StoreManager.cpp
+	"StoreManager.h"
+
+1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/StoreManager.h
+	<iostream>
+	<vector>
+	<string>
+	<User.h>
+
+1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/User.h
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+
+1583854085 /home/ryan/Documents/DealDone-WIP/DealDone/include/Vehicle.h
+	<vector>
+	<string>
+	<iostream>
+	"Manufacturer.h"
+	"Vehicle.h"
+
+1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/User.cpp
+	"User.h"
+
+1583854085 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/Vehicle.cpp
+	"Vehicle.h"
+
+1583854298 source:/home/ryan/Documents/DealDone-WIP/DealDone/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	"Air_Vehicle.h"
+	"Land_Vehicle.h"
+	"Manufacturer.h"
+	"User.h"
+	"StoreManager.h"
+
+1583853650 /home/ryan/Documents/DealDone-WIP/DealDone/include/Air_Vehicle.h
+	<Vehicle.h>
+
+1583852946 /home/ryan/Documents/DealDone-WIP/DealDone/include/Land_Vehicle.h
+	<Vehicle.h>
+
+1583864636 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/Land_Vehicle.cpp
+	"Land_Vehicle.h"
+	"Colours.h"
+
+1583854267 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/Air_Vehicle.cpp
+	"Air_Vehicle.h"
+
+1583864657 /home/ryan/Documents/DealDone-WIP/DealDone/include/Colours.h
+

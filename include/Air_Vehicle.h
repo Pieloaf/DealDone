@@ -27,6 +27,7 @@ class Air_Vehicle : public Vehicle
         // User Defined Functions
 
         // Overwritten Functions
+        void displayVehicleBasics();
         void displayVehicleDetails();
 
     protected:

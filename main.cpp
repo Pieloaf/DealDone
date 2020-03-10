@@ -22,7 +22,7 @@ int main()
     Land_Vehicle v2(m1);
     v2.setModel_Name("Avensis");
 
-    v1.displayVehicleDetails();
+    v2.displayVehicleBasics();
 
     StoreManager s1("John", "John's Motors");
     s1.addVehicle(&v1);
