@@ -10,10 +10,9 @@ User::~User()
 }
 
 void User::myVehicles(){
-	std::cout << "My Vehicles: " << std::endl;
 	for (int i = 0; i < int(ownedVehicles.size()); i++)
 	{
-		std::cout << "\t" << i+1 << ". " << ownedVehicles[i].getModel_Name() << std::endl;
+		std::cout << "\t" << i+1 << ". " << ownedVehicles[i]->getModel_Name() << std::endl;
 	}
 }
 

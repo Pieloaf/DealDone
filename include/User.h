@@ -19,12 +19,12 @@ class User
         void myVehicles();
         void listDetails();
 
-        void buy( Vehicle v ){ ownedVehicles.push_back(v); }
+        void buy( Vehicle* v ){ ownedVehicles.push_back(v); }
 
    protected:
 
    private:
         const std::string name;
-        vector<Vehicle> ownedVehicles;
+        vector<Vehicle*> ownedVehicles;
 };
 #endif

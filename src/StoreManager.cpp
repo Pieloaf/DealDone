@@ -20,9 +20,7 @@ void StoreManager::displayListedVehicles()
 {
     std::cout << "***" << storeName << "***" << endl;
     for(int i = 0; i < int(listedVehicles.size()); i++)
-    {
-        std::cout << i+1 << ". "<< listedVehicles[i].getModel_Name() << endl;
-    }
+    User::myVehicles();
 }
 
 void StoreManager::removeVehicle(int i)

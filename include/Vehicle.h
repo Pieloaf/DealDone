@@ -44,7 +44,7 @@ class Vehicle
         void setVehicleManu(Manufacturer m1);
 
         // User Defined Functions
-        void displayVehicleDetails();
+        virtual void displayVehicleDetails();
 
     protected:
 

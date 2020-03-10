@@ -9,13 +9,12 @@
 class StoreManager : public User
 {
      public:
-          
 //          StoreManager();
           StoreManager(std::string uname, std::string sname);
           virtual ~StoreManager();
 
           void displayListedVehicles();
-          void addVehicle(Vehicle v){ listedVehicles.push_back(v); };
+          void addVehicle(Vehicle* v){ listedVehicles.push_back(v); };
           void removeVehicle(int i);
 
           void setStoreName( std::string val ){ storeName=val; }
@@ -30,8 +29,7 @@ class StoreManager : public User
 
      private:
           static int numStores;
-          //int numStores=10;
-          std::vector<Vehicle> listedVehicles;
+          std::vector<Vehicle*> listedVehicles;
           std::string storeName;
           std::string description;
 };
