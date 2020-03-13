@@ -124,45 +124,59 @@
 1583849769 /home/ryan/Downloads/DealDone-master/include/Land_Vehicle.h
 	<Vehicle.h>
 
-<<<<<<< HEAD
-1583850516 source:/home/piercel/Documents/DealDone/src/Air_Vehicle.cpp
+1583852158 D
+
+1584096070 source:/home/piercel/Documents/DealDone/src/Air_Vehicle.cpp
 	"Air_Vehicle.h"
 
-1583850516 /home/piercel/Documents/DealDone/include/Air_Vehicle.h
+1584096070 /home/piercel/Documents/DealDone/include/Air_Vehicle.h
 	<Vehicle.h>
 
-1583853577 /home/piercel/Documents/DealDone/include/Vehicle.h
+1584096070 /home/piercel/Documents/DealDone/include/Vehicle.h
 	<vector>
 	<string>
 	<iostream>
 	"Manufacturer.h"
 	"Vehicle.h"
+	"Colours.h"
 
-1583850516 /home/piercel/Documents/DealDone/include/Manufacturer.h
-=======
+1584096070 /home/piercel/Documents/DealDone/include/Manufacturer.h
+	<vector>
+	<string>
+	<iostream>
+	"Colours.h"
+
 1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/Manufacturer.cpp
 	"Manufacturer.h"
 
 1583852946 /home/ryan/Documents/DealDone-WIP/DealDone/include/Manufacturer.h
->>>>>>> origin/master
+
+1583864657 gin/master
 	<vector>
 	<string>
 	<iostream>
+	<iostream>
+	<vector>
+	<string>
+	<User.h>
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
 
-<<<<<<< HEAD
-1583850516 source:/home/piercel/Documents/DealDone/src/Land_Vehicle.cpp
+1584096070 source:/home/piercel/Documents/DealDone/src/Land_Vehicle.cpp
 	"Land_Vehicle.h"
 
-1583850516 /home/piercel/Documents/DealDone/include/Land_Vehicle.h
+1584096070 /home/piercel/Documents/DealDone/include/Land_Vehicle.h
 	<Vehicle.h>
 
 1583850516 source:/home/piercel/Documents/DealDone/src/Manufacturer.cpp
 	"Manufacturer.h"
 
-1584094421 source:/home/piercel/Documents/DealDone/src/Menu.cpp
+1584122380 source:/home/piercel/Documents/DealDone/src/Menu.cpp
 	"Menu.h"
 
-1584094424 /home/piercel/Documents/DealDone/include/Menu.h
+1584122123 /home/piercel/Documents/DealDone/include/Menu.h
 	<string>
 	<vector>
 	<iostream>
@@ -170,36 +184,34 @@
 1583852958 source:/home/piercel/Documents/DealDone/src/StoreManager.cpp
 	"StoreManager.h"
 
-1583850993 /home/piercel/Documents/DealDone/include/StoreManager.h
-=======
-1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/StoreManager.cpp
-	"StoreManager.h"
-
-1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/StoreManager.h
->>>>>>> origin/master
+1584096070 /home/piercel/Documents/DealDone/include/StoreManager.h
 	<iostream>
 	<vector>
 	<string>
 	<User.h>
 
-<<<<<<< HEAD
-1583851257 /home/piercel/Documents/DealDone/include/User.h
-=======
-1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/User.h
->>>>>>> origin/master
+1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/StoreManager.cpp
+	"StoreManager.h"
+
+1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/StoreManager.h
+
+1584096070 /home/piercel/Documents/DealDone/include/User.h
 	<iostream>
 	<string>
 	<vector>
 	"Vehicle.h"
+	"Colours.h"
 
-<<<<<<< HEAD
+1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/User.h
+
 1583852482 source:/home/piercel/Documents/DealDone/src/User.cpp
 	"User.h"
 
-1583850516 source:/home/piercel/Documents/DealDone/src/Vehicle.cpp
+1584096070 source:/home/piercel/Documents/DealDone/src/Vehicle.cpp
 	"Vehicle.h"
 
-=======
+1583850516 "
+
 1583854085 /home/ryan/Documents/DealDone-WIP/DealDone/include/Vehicle.h
 	<vector>
 	<string>
@@ -238,4 +250,17 @@
 
 1583864657 /home/ryan/Documents/DealDone-WIP/DealDone/include/Colours.h
 
->>>>>>> origin/master
+1584096070 /home/piercel/Documents/DealDone/include/Colours.h
+
+1584117481 source:/home/piercel/Documents/DealDone/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	"Menu.h"
+	"Air_Vehicle.h"
+	"Land_Vehicle.h"
+	"Manufacturer.h"
+	"User.h"
+	"StoreManager.h"
+

@@ -15,10 +15,11 @@ void signup(string usr, string pswd);
 
 int main()
 {
-    Menu mainMenu("Main Menu");
-    Menu sub1("sub1", &mainMenu);
-    Menu sub2("sub2", &mainMenu);
-    Menu subsub("subtomyyt", &sub1);
+    Menu mainMenu("Main Menu", false);
+    Menu search("Search", false, &mainMenu);
+    Menu browse("Browse", false, &mainMenu);
+    Menu browse2("Browse2", false, &browse);
+    Menu myAccount("My Account", false, &mainMenu);
     Menu* currentMenu = &mainMenu;
 
 
@@ -34,21 +35,18 @@ int main()
     cout<< "\n===== Welcome to DealDone Motor Sales =====\n" << endl;
 
     while(int hold = 1)
-    {   currentMenu->displayMenu();
-        string opt;
+    {   
+        currentMenu->displayMenu();
+        int opt;
         cin >> opt;
-
-        switch(opt[0])
+        
+        if (currentMenu->parent && opt == currentMenu->children.size()+1)
         {
-        case '1':
-            cout << "ting";
-            currentMenu = currentMenu->getChild(1);
-            break;
-        case '2':
-            cout << "yeah";
-            currentMenu = currentMenu->getChild(2);
-        default:
-            break;
+            currentMenu = currentMenu->parent;
+        }
+        else
+        {
+            currentMenu = currentMenu->getChild(opt-1);
         }
     }
 
