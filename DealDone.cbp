@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Air_Vehicle.h" />
+		<Unit filename="include/Colours.h" />
 		<Unit filename="include/Land_Vehicle.h" />
 		<Unit filename="include/Manufacturer.h" />
 		<Unit filename="include/StoreManager.h" />

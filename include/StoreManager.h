@@ -22,9 +22,9 @@ class StoreManager : public User
 
           void setDescription( std::string val ){ description=val; }
           std::string getDescription(){ return description; }
-          
-          //int getNumStores(){return numStores;}  
-          //void incNumStores(){numStores++;}        
+
+          //int getNumStores(){return numStores;}
+          //void incNumStores(){numStores++;}
      protected:
 
      private:

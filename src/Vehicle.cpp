@@ -11,12 +11,8 @@ Vehicle::~Vehicle()
 
 }
 
-void Vehicle::setVehicleManu(Manufacturer m){
-    vehicle_manu = m;
-}
-
 void Vehicle::displayVehicleDetails(){
-
+    //TODO add bigger vehicle asci image
     cout << "***" << endl;
     cout << "Vehicle Name: " << model_name << endl;
     cout << "Manufacturer: " << vehicle_manu.getName() << endl;

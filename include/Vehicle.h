@@ -8,6 +8,8 @@
 #include "Manufacturer.h"
 #include "Vehicle.h"
 
+#include "Colours.h"
+
 using std::string;
 using std::vector;
 using std::cout;
@@ -28,6 +30,8 @@ class Vehicle
         void setPrice(int val) { price = val; }
 
         int getSeats() { return seats; }
+        int getYear() { return year; }
+        void setYear(int val) { year = val; }
         void setSeats(int val) { seats = val; }
 
         string getVehicleColour() { return vehicle_colour; }
@@ -48,9 +52,11 @@ class Vehicle
         void setModel_Name(string val) { model_name = val; }
 
         // User Defined Accessor and Mutators
-        void setVehicleManu(Manufacturer m1);
+        void setVehicleManu(Manufacturer m){ vehicle_manu = m; }
+        string getVehicleManuName() { return vehicle_manu.getName(); }
 
         // User Defined Functions
+        virtual void displayVehicleBasics() = 0;
         virtual void displayVehicleDetails();
 
     protected:
@@ -61,6 +67,7 @@ class Vehicle
         unsigned int price;
         unsigned int seats;
         float length;
+        int year;
         float width;
         float weight;
         string description;
