@@ -1,10 +1,16 @@
 #include "Menu.h"
-Menu::Menu()
+Menu::Menu(const string name, Menu *parent) : name(name)
 {
-
+    if (parent)
+    {
+        parent->children.push_back(this);
+    }
 }
 
-Menu::~Menu()
+void Menu::displayMenu()
 {
-
+    for (int i=0; i<children.size(); i++)
+    {
+        std::cout << getChild(i)->name;
+    }
 }

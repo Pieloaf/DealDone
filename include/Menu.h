@@ -1,17 +1,23 @@
 #ifndef MENU_H
 #define MENU_H
+
+#include <string>
+#include <vector>
+#include <iostream>
+
+using std::vector;
+using std::string;
+
 class Menu
 {
-   public:
-        Menu();
-        virtual ~Menu();
-        void setoptions( vector<string> val ){ options=val; }
-        vector<string> getoptions(){ return options; }
-        void setfunc( vector<string> val ){ func=val; }
-        vector<string> getfunc(){ return func; }
-   protected:
-   private:
-        vector<string> options;
-        vector<string> func;
+     public:
+        Menu(const string name, Menu *parent=nullptr);
+        Menu* getChild(int i) {return children[i];}
+        void displayMenu();
+        
+     private:
+          vector<Menu *> children;
+          const string name;
+        
 };
 #endif

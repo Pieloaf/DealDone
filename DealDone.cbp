@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Air_Vehicle.h" />
 		<Unit filename="include/Land_Vehicle.h" />
 		<Unit filename="include/Manufacturer.h" />
@@ -41,6 +42,7 @@
 		<Unit filename="include/User.h" />
 		<Unit filename="include/Vehicle.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Air_Vehicle.cpp" />
 		<Unit filename="src/Land_Vehicle.cpp" />
 		<Unit filename="src/Manufacturer.cpp" />
