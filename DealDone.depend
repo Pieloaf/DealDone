@@ -1,26 +1,35 @@
 # depslib dependency file v1.0
-1582837182 source:/home/ryan/Documents/DealDone/DealDone/src/Vehicle.cpp
+1586357199 source:/home/ryan/Documents/DealDone/DealDone/src/Vehicle.cpp
 	"Vehicle.h"
 
-1582837125 /home/ryan/Documents/DealDone/DealDone/include/Vehicle.h
+1586350534 /home/ryan/Documents/DealDone/DealDone/include/Vehicle.h
 	<vector>
 	<string>
 	<iostream>
 	"Manufacturer.h"
-
-1582837237 source:/home/ryan/Documents/DealDone/DealDone/main.cpp
-	<iostream>
-	<string>
-	<vector>
 	"Vehicle.h"
-	"Manufacturer.h"
+	"Colours.h"
 
-1582837105 /home/ryan/Documents/DealDone/DealDone/include/Manufacturer.h
+1586356757 source:/home/ryan/Documents/DealDone/DealDone/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	"Menu.h"
+	"Vehicle.h"
+	"Air_Vehicle.h"
+	"Land_Vehicle.h"
+	"Manufacturer.h"
+	"User.h"
+	"StoreManager.h"
+
+1586353416 /home/ryan/Documents/DealDone/DealDone/include/Manufacturer.h
 	<vector>
 	<string>
 	<iostream>
+	"Colours.h"
 
-1582837105 source:/home/ryan/Documents/DealDone/DealDone/src/Manufacturer.cpp
+1586357264 source:/home/ryan/Documents/DealDone/DealDone/src/Manufacturer.cpp
 	"Manufacturer.h"
 
 1582837105 source:/home/piercel/Documents/DealDone (copy)/src/Manufacturer.cpp
@@ -124,7 +133,8 @@
 1583849769 /home/ryan/Downloads/DealDone-master/include/Land_Vehicle.h
 	<Vehicle.h>
 
-<<<<<<< HEAD
+1583852158 D
+
 1583850516 source:/home/piercel/Documents/DealDone/src/Air_Vehicle.cpp
 	"Air_Vehicle.h"
 
@@ -139,17 +149,25 @@
 	"Vehicle.h"
 
 1583850516 /home/piercel/Documents/DealDone/include/Manufacturer.h
-=======
+
 1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/Manufacturer.cpp
 	"Manufacturer.h"
 
 1583852946 /home/ryan/Documents/DealDone-WIP/DealDone/include/Manufacturer.h
->>>>>>> origin/master
+
+1583864657 gin/master
 	<vector>
 	<string>
 	<iostream>
+	<iostream>
+	<vector>
+	<string>
+	<User.h>
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
 
-<<<<<<< HEAD
 1583850516 source:/home/piercel/Documents/DealDone/src/Land_Vehicle.cpp
 	"Land_Vehicle.h"
 
@@ -171,35 +189,24 @@
 	"StoreManager.h"
 
 1583850993 /home/piercel/Documents/DealDone/include/StoreManager.h
-=======
+
 1583852158 source:/home/ryan/Documents/DealDone-WIP/DealDone/src/StoreManager.cpp
 	"StoreManager.h"
 
 1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/StoreManager.h
->>>>>>> origin/master
-	<iostream>
-	<vector>
-	<string>
-	<User.h>
 
-<<<<<<< HEAD
 1583851257 /home/piercel/Documents/DealDone/include/User.h
-=======
-1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/User.h
->>>>>>> origin/master
-	<iostream>
-	<string>
-	<vector>
-	"Vehicle.h"
 
-<<<<<<< HEAD
+1583852158 /home/ryan/Documents/DealDone-WIP/DealDone/include/User.h
+
 1583852482 source:/home/piercel/Documents/DealDone/src/User.cpp
 	"User.h"
 
 1583850516 source:/home/piercel/Documents/DealDone/src/Vehicle.cpp
 	"Vehicle.h"
 
-=======
+1583850516 "
+
 1583854085 /home/ryan/Documents/DealDone-WIP/DealDone/include/Vehicle.h
 	<vector>
 	<string>
@@ -238,4 +245,44 @@
 
 1583864657 /home/ryan/Documents/DealDone-WIP/DealDone/include/Colours.h
 
->>>>>>> origin/master
+1586347792 /home/ryan/Documents/DealDone/DealDone/include/Menu.h
+	<string>
+	<vector>
+	<iostream>
+
+1586347792 /home/ryan/Documents/DealDone/DealDone/include/Air_Vehicle.h
+	<Vehicle.h>
+
+1586347792 /home/ryan/Documents/DealDone/DealDone/include/Colours.h
+
+1586357452 /home/ryan/Documents/DealDone/DealDone/include/Land_Vehicle.h
+	<Vehicle.h>
+
+1586347792 /home/ryan/Documents/DealDone/DealDone/include/User.h
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+	"Colours.h"
+
+1586347792 /home/ryan/Documents/DealDone/DealDone/include/StoreManager.h
+	<iostream>
+	<vector>
+	<string>
+	<User.h>
+
+1586347792 source:/home/ryan/Documents/DealDone/DealDone/src/Air_Vehicle.cpp
+	"Air_Vehicle.h"
+
+1586357377 source:/home/ryan/Documents/DealDone/DealDone/src/Land_Vehicle.cpp
+	"Land_Vehicle.h"
+
+1586347792 source:/home/ryan/Documents/DealDone/DealDone/src/Menu.cpp
+	"Menu.h"
+
+1586347792 source:/home/ryan/Documents/DealDone/DealDone/src/StoreManager.cpp
+	"StoreManager.h"
+
+1586347792 source:/home/ryan/Documents/DealDone/DealDone/src/User.cpp
+	"User.h"
+

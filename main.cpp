@@ -4,6 +4,7 @@
 #include <fstream>
 
 #include "Menu.h"
+#include "Vehicle.h"
 #include "Air_Vehicle.h"
 #include "Land_Vehicle.h"
 #include "Manufacturer.h"
@@ -15,6 +16,7 @@ void signup(string usr, string pswd);
 
 int main()
 {
+    /*
     Menu mainMenu("Main Menu");
     Menu sub1("sub1", &mainMenu);
     Menu sub2("sub2", &mainMenu);
@@ -30,7 +32,7 @@ int main()
     cout << "# $ $ * d h o $ & $ $ $ & $ * k b o $ $ $ " << endl;
     cout << "; U U #     k Y X X X z z c h     o n n x " << endl;
     cout << "      ^ a a                 ^ a o  " << endl;
-    
+
     cout<< "\n===== Welcome to DealDone Motor Sales =====\n" << endl;
 
     while(int hold = 1)
@@ -51,15 +53,17 @@ int main()
             break;
         }
     }
+    */
 
-    /*Manufacturer m1("Soyota");
-    m1.addColour("blue");
-    m1.addColour("red");
-    m1.addColour("green");
-    m1.addColour("yellow");
-    
-    signup("etc","123");
+    Air_Vehicle v1;
+    v1.setDescription("dsfs");
+    Air_Vehicle v2;
+    v1.displayVehicleDetails();
+    v2.displayVehicleDetails();
+    if(v1 != v2) cout << "yoi";
 
+    //signup("etc","123");
+/*
     Air_Vehicle v1(m1);
     v1.setModel_Name("Auris");
     Land_Vehicle v2(m1);
@@ -102,6 +106,6 @@ void signup(string usr, string pswd)
 
 void signin(string usr, string pswd)
 {
-    
+
 }
 

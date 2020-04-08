@@ -29,14 +29,17 @@ class Manufacturer
         void setProductType(string val) { product_type = val; }
 
         // User Defined mutators and accessors
-        void addColour(string colour);
-        void removeColour(string colour);
+        vector<string> getColour_List() { return colour_list; }
 
         // User Defined Functions
+        void addColour(string colour);
+        void removeColour(string colour);
         void listColours();
         void manuDetails();
 
-
+        // Friend Functions
+        friend bool operator== (Manufacturer m1, Manufacturer m2);
+        friend bool operator!= (Manufacturer m1, Manufacturer m2);
 
     protected:
 

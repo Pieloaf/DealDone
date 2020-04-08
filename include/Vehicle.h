@@ -55,9 +55,15 @@ class Vehicle
         void setVehicleManu(Manufacturer m){ vehicle_manu = m; }
         string getVehicleManuName() { return vehicle_manu.getName(); }
 
+        Manufacturer getVehicle_Manu() {return vehicle_manu; }
+
         // User Defined Functions
         virtual void displayVehicleBasics() = 0;
         virtual void displayVehicleDetails();
+
+        // Friend Functions
+        friend bool operator== (Vehicle &veh1, Vehicle &veh2);
+        friend bool operator!= (Vehicle &veh1, Vehicle &veh2);
 
     protected:
 

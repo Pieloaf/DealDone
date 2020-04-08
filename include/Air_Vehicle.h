@@ -30,6 +30,10 @@ class Air_Vehicle : public Vehicle
         void displayVehicleBasics();
         void displayVehicleDetails();
 
+        //friend functions
+        friend bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2);
+        friend bool operator!= (Air_Vehicle &veh1, Air_Vehicle &veh2);
+
     protected:
 
     private:
