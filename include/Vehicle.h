@@ -36,15 +36,6 @@ class Vehicle
 
         string getVehicleColour() { return vehicle_colour; }
 
-        float getLength() { return length; }
-        void setLength(float val) { length = val; }
-
-        float getWidth() { return width; }
-        void setWidth(float val) { width = val; }
-
-        float getWeight() { return weight; }
-        void setWeight(float val) { weight = val; }
-
         string getDescription() { return description; }
         void setDescription(string val) { description = val; }
 
@@ -72,10 +63,7 @@ class Vehicle
         // simple data types
         unsigned int price;
         unsigned int seats;
-        float length;
         int year;
-        float width;
-        float weight;
         string description;
         string model_name;
 

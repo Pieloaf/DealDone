@@ -3,7 +3,7 @@
 #include <vector>
 #include <fstream>
 
-#include "Menu.h"
+//#include "Menu.h"
 #include "Vehicle.h"
 #include "Air_Vehicle.h"
 #include "Land_Vehicle.h"
@@ -15,7 +15,7 @@ using namespace std;
 void signup(string usr, string pswd);
 void menuFunc(string n);
 
-Menu mainMenu("Main Menu", false);
+/*Menu mainMenu("Main Menu", false);
 Menu search("Search", true, &mainMenu);
 Menu browse("Browse", false, &mainMenu);
 Menu listAll("All Vehicles", true, &browse);
@@ -25,7 +25,7 @@ StoreManager s1("John", "John's Motors");
 StoreManager s2("Mark", "Mark's Motors");
 vector <Vehicle>  allVehicles;
 
-int main()
+*/int main()
 {
 
 
@@ -40,9 +40,7 @@ int main()
 
     cout<< "\n===== Welcome to DealDone Motor Sales =====\n" << endl;
 
-
-
-    Manufacturer m1("Soyota");
+   Manufacturer m1("Soyota");
     m1.addColour("blue");
     m1.addColour("red");
     m1.addColour("green");
@@ -55,7 +53,7 @@ int main()
     v2.displayVehicleDetails();
     if(v1 != v2) cout << "yoi";
 
-    //signup("etc","123");
+/*    //signup("etc","123");
 
     //Menu Loop
     while(int hold = 1)
@@ -148,5 +146,6 @@ void menuFunc(string n)
             }
         }
         currentMenu=currentMenu->parent;
-    }
+    }*/
+    return 0;
 }
