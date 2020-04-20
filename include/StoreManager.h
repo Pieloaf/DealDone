@@ -9,7 +9,7 @@
 class StoreManager : public User
 {
      public:
-//          StoreManager();
+//        StoreManager();
           StoreManager(std::string uname, std::string sname);
           virtual ~StoreManager();
 
@@ -22,9 +22,8 @@ class StoreManager : public User
 
           void setDescription( std::string val ){ description=val; }
           std::string getDescription(){ return description; }
+          void listDetails();
 
-          //int getNumStores(){return numStores;}
-          //void incNumStores(){numStores++;}
      protected:
 
      private:

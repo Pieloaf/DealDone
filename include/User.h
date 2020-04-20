@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Vehicle.h"
+//#include "StoreManager.h"
 
 #include "Colours.h"
 class User

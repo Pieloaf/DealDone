@@ -26,3 +26,10 @@ void StoreManager::removeVehicle(int i)
     i--;
     listedVehicles.erase(listedVehicles.begin()+i);
 }
+
+void StoreManager::listDetails()
+{
+    User::listDetails();
+    std::cout << "Store Name: " << storeName << std::endl;
+    std::cout << "Description: " << description << std::endl;
+}
