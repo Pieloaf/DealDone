@@ -13,15 +13,20 @@
 
 using namespace std;
 void signup(string usr, string pswd);
+void menuFunc(string n);
+
+Menu mainMenu("Main Menu", false);
+Menu search("Search", true, &mainMenu);
+Menu browse("Browse", false, &mainMenu);
+Menu listAll("All Vehicles", true, &browse);
+Menu myAccount("My Account", false, &mainMenu);
+Menu* currentMenu = &mainMenu;
+StoreManager s1("John", "John's Motors");
+StoreManager s2("Mark", "Mark's Motors");
+vector <Vehicle>  allVehicles;
 
 int main()
 {
-    /*
-    Menu mainMenu("Main Menu");
-    Menu sub1("sub1", &mainMenu);
-    Menu sub2("sub2", &mainMenu);
-    Menu subsub("subtomyyt", &sub1);
-    Menu* currentMenu = &mainMenu;
 
 
     cout << "              i X z X Y m X X n          " << endl;
@@ -35,25 +40,13 @@ int main()
 
     cout<< "\n===== Welcome to DealDone Motor Sales =====\n" << endl;
 
-    while(int hold = 1)
-    {   currentMenu->displayMenu();
-        string opt;
-        cin >> opt;
 
-        switch(opt[0])
-        {
-        case '1':
-            cout << "ting";
-            currentMenu = currentMenu->getChild(1);
-            break;
-        case '2':
-            cout << "yeah";
-            currentMenu = currentMenu->getChild(2);
-        default:
-            break;
-        }
-    }
-    */
+
+    Manufacturer m1("Soyota");
+    m1.addColour("blue");
+    m1.addColour("red");
+    m1.addColour("green");
+    m1.addColour("yellow");
 
     Air_Vehicle v1;
     v1.setDescription("dsfs");
@@ -63,35 +56,29 @@ int main()
     if(v1 != v2) cout << "yoi";
 
     //signup("etc","123");
-/*
-    Air_Vehicle v1(m1);
-    v1.setModel_Name("Auris");
-    Land_Vehicle v2(m1);
-    v2.setModel_Name("Avensis");
 
-<<<<<<< HEAD
-    //v1.displayVehicleDetails();
-=======
-    v2.displayVehicleBasics();
->>>>>>> origin/master
+    //Menu Loop
+    while(int hold = 1)
+    {   
+        //If a function can be executed from a menu, the menu needs to be made manually in the menuFunc function below
+        if (currentMenu->hasFunc==true){menuFunc(currentMenu->name);}
 
-    StoreManager s1("John", "John's Motors");
-    s1.addVehicle(&v1);
-    s1.addVehicle(&v2);
-
-    s1.displayListedVehicles();
-    int i;
-    cin >> i;
-    s1.removeVehicle(i);
-    s1.displayListedVehicles();
-    cout << s1.getName();
-
-    User u1("Paul");
-    u1.buy(&v1);
-    u1.buy(&v2);
-    u1.myVehicles();
-    u1.listDetails();*/
-
+        //Menu loop that will navigate up and down between menus
+        else{
+            currentMenu->displayMenu();
+            int opt;
+            cin >> opt;
+            
+            if (currentMenu->parent && opt == currentMenu->children.size()+1)
+            {
+                currentMenu = currentMenu->parent;
+            }
+            else
+            {
+                currentMenu = currentMenu->getChild(opt-1);
+            }
+        }
+    }
 }
 
 
@@ -109,3 +96,57 @@ void signin(string usr, string pswd)
 
 }
 
+void listall()
+{
+    for (int s=0; s<allVehicles.size(); s++)
+    {
+        cout << s << endl;
+        cout << allVehicles[s];
+    }
+}
+
+void menuFunc(string n)
+{
+    
+    if (n == listAll.name)
+    {
+        int x;
+        while(int hold=1)
+        {
+            listall();
+            cin >> x;
+            if(x==0)
+            {
+                currentMenu=currentMenu->parent;
+                hold=0;
+            }
+            else 
+            {
+                cout << "is this it?"<< endl;
+                //cout << stores[s].getStoreName();
+            }
+        return;
+        }
+    }
+    else if (n == search.name)
+    {
+        string search;
+
+        while (search != "0")
+        {        
+            cout << "Enter a search term: " << endl;
+            cin >> search;
+            cout << endl << search << endl;
+            for (int s=0; s<allVehicles.size(); s++)
+            {
+                Vehicle a = allVehicles[s];
+
+                if (search == a.getModel_Name() || search == a.getVehicleManuName())
+                {
+                    cout << endl << allVehicles[s] << endl;
+                }
+            }
+        }
+        currentMenu=currentMenu->parent;
+    }
+}
