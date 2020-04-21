@@ -13,13 +13,12 @@ User::~User()
 
 }
 
-//
 void User::myVehicles(){
 
 	//iterates through owned vehicles vector and prints out the index+1 and model_name of all objects in the vector
-	for (int i = 0; i < ownedVehicles.size(); i++)
+	for (int i = 0; i < int(ownedVehicles.size()); i++)
 	{
-		cout << "\t" << i+1 << ". " << ownedVehicles[i]->getModel_Name() << endl;
+		cout << "\t" << i+1 << ". " << ownedVehicles[i]->getModelName() << endl;
 	}
 }
 
@@ -32,7 +31,7 @@ void User::listDetails()
 void User::removeVehicle(Vehicle* v)
 {
 	// itterates to the given vehicle object from the ownedVehicles vector and removes it from the vector
-	for(int x=0; x<ownedVehicles.size()-1; x++)
+	for(int x=0; x<int(ownedVehicles.size()-1); x++)
     {
 		int i = x--;
         if (v==ownedVehicles[x])

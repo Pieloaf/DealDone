@@ -39,7 +39,7 @@ void StoreManager::displayListedVehicles()
     // iterates through vector of vechicle objects in listedVehicles vector and prints out the index+1 and the model_name
     for(int i = 0; i < int(listedVehicles.size()); i++)
     {
-        std::cout << i+1 << ". "<< listedVehicles[i]->getModel_Name() << endl;
+        std::cout << i+1 << ". "<< listedVehicles[i]->getModelName() << endl;
     }
 }
 
@@ -64,11 +64,12 @@ void StoreManager::sell(User& u, Vehicle* v)
     u.buy(v);
 
     // itterates to the given vehicle object from the listedVehicles vector and removes it from the vector
-    for(int x=0; x<listedVehicles.size()-1; x++)
+    for(int x = 0; x < int(listedVehicles.size()-1); x++)
     {
         if (v==listedVehicles[x])
+        {
             unlistVehicle(x);
             break;
-        
+        }
     }
 }

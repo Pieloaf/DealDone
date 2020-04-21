@@ -59,7 +59,6 @@ class Vehicle
         // Friend Functions
         friend bool operator== (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons
         friend bool operator!= (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons
-        Vehicle& operator =(Vehicle &veh1);
 
     protected:
 

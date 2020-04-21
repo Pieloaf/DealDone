@@ -30,8 +30,8 @@ class User
         // User Defined Accessors and Mutators
         void buy( Vehicle* v ){ ownedVehicles.push_back(v); }
         void removeVehicle(Vehicle* v);
-        int numVehicles(){ownedVehicles.size();}
-        Vehicle* getVehicle(int i);
+        int numVehicles(){return ownedVehicles.size();}
+        Vehicle* getVehicle(int i){return ownedVehicles[i];}
 
         //User Defined Functions
         void myVehicles();

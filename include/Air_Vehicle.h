@@ -17,10 +17,10 @@ class Air_Vehicle : public Vehicle
         /// Function Declarations
         // Generated Accessors and Mutators
 
-        int getmax_Air_Speed() { return max_air_speed; }
-        void setMax_Air_Speed(int val) { max_air_speed = val; }
-        int getFlight_Hours() { return flight_hours; }
-        void setFlight_Hours(int val) { flight_hours = val; }
+        int getMaxAirSpeed() { return max_air_speed; }
+        void setMaxAirSpeed(int val) { max_air_speed = val; }
+        int getFlightHours() { return flight_hours; }
+        void setFlightHours(int val) { flight_hours = val; }
 
         // User Defined Accessors and Mutators
 

@@ -29,7 +29,7 @@ vector <Vehicle>  allVehicles;
 {
 
 
-    cout << "              i X z X Y m X X n          " << endl;
+    /*cout << "              i X z X Y m X X n          " << endl;
     cout << "            + ^         |       \\        " << endl;
     cout << "      `  c 1 (          x       + c i     " << endl;
     cout << "  / $ $ $ $ $ $ & $ $ m # $ $ $ $ $ $ * J " << endl;
@@ -39,19 +39,47 @@ vector <Vehicle>  allVehicles;
     cout << "      ^ a a                 ^ a o  " << endl;
 
     cout<< "\n===== Welcome to DealDone Motor Sales =====\n" << endl;
-
+*/
+    User u1;
    Manufacturer m1("Soyota");
     m1.addColour("blue");
     m1.addColour("red");
     m1.addColour("green");
     m1.addColour("yellow");
 
-    Air_Vehicle v1;
+    Land_Vehicle v1;
     v1.setDescription("dsfs");
-    Air_Vehicle v2;
-    v1.displayVehicleDetails();
-    v2.displayVehicleDetails();
-    if(v1 != v2) cout << "yoi";
+    v1.setModelName("car");
+    //Air_Vehicle v2;
+    //v1.displayVehicleDetails();
+    //v2.displayVehicleDetails();
+    //if(v1 != v2) cout << "yoi";
+
+    StoreManager s1("John", "John's Motors");
+    //User u1("Mary");
+
+    u1.buy(&v1);
+    cout << u1 <<"\n";
+
+    //cout << "store 1" <<endl;
+    s1.displayListedVehicles();
+    cout << "-------------------" << endl;
+    //cout << "user 1" <<endl;
+    u1.myVehicles();
+
+    s1.sell(u1, &v1);
+
+    //cout << "store 2" <<endl;
+    s1.displayListedVehicles();
+    cout << "-------------------" << endl;
+    //cout << "user 2" <<endl;
+    u1.myVehicles();
+
+
+    cout << "\n\n other stuff \n";
+    int x = 5;
+    int y =10;
+    cout << x+y << endl;
 
 /*    //signup("etc","123");
 
