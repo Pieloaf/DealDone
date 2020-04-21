@@ -30,44 +30,47 @@ class Vehicle
         void setPrice(int val) { price = val; }
 
         int getSeats() { return seats; }
-        int getYear() { return year; }
-        void setYear(int val) { year = val; }
         void setSeats(int val) { seats = val; }
 
+        int getYear() { return year; }
+        void setYear(int val) { year = val; }
+
+        void setVehicleColour(string val) { vehicle_colour = val; }
         string getVehicleColour() { return vehicle_colour; }
 
         string getDescription() { return description; }
         void setDescription(string val) { description = val; }
 
-        string getModel_Name() { return model_name; }
-        void setModel_Name(string val) { model_name = val; }
+        string getModelName() { return model_name; }
+        void setModelName(string val) { model_name = val; }
 
         // User Defined Accessor and Mutators
-        void setVehicleManu(Manufacturer m){ vehicle_manu = m; }
-        string getVehicleManuName() { return vehicle_manu.getName(); }
 
-        Manufacturer getVehicle_Manu() {return vehicle_manu; }
+        Manufacturer getVehicleManu() { return vehicle_manu; }
+        void setVehicleManu(Manufacturer m){ vehicle_manu = m; }
+
+        string getVehicleManuName() { return vehicle_manu.getName(); } // this is a special accessor to get the name of the manufacturer
+
 
         // User Defined Functions
-        virtual void displayVehicleBasics() = 0;
-        virtual void displayVehicleDetails();
+        virtual void displayVehicleBasics() = 0; // fully virtual as vehicle objects do not need this function
+        virtual void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
 
         // Friend Functions
-        friend bool operator== (Vehicle &veh1, Vehicle &veh2);
-        friend bool operator!= (Vehicle &veh1, Vehicle &veh2);
+        friend bool operator== (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons
+        friend bool operator!= (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons
+        Vehicle& operator =(Vehicle &veh1);
 
     protected:
 
     private:
-        /// Variables
-        // simple data types
+        /// Data Members
+        // primitive data types
         unsigned int price;
         unsigned int seats;
         int year;
         string description;
         string model_name;
-
-        // constants
         string vehicle_colour;
 
         // complex data types
