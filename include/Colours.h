@@ -10,6 +10,7 @@ Last Updated: 10/03/20
 
 /// Code Behaviour: The colour should be used in a standard cout. This colour will remain on the console until another colour is passed into a cout
 
+#ifdef linux
 /// Text Colour Codes
 // Normal Colours
 #define BLK "\x1B[30m"
@@ -60,5 +61,59 @@ Last Updated: 10/03/20
 // No Colour
 #define B_NOCOL "\x1B[49m"
 
+#endif // linux
+
+#ifdef WIN32
+/// Blank Codes so there is no printout on windows
+// Normal Colours
+#define BLK ""
+#define RED ""
+#define GREN ""
+#define ORNG ""
+#define BLUE ""
+#define PURP ""
+#define CYAN ""
+#define WITE ""
+
+//Bright Colours
+#define LBLK ""
+#define LRED ""
+#define LGREN ""
+#define LORNG ""
+#define LBLUE ""
+#define LPURP ""
+#define LCYAN ""
+#define LGREY ""
+#define LWITE ""
+
+// No Colour
+#define NOCOL ""
+
+
+/// Background Colour Codes
+// Normal Colours
+#define B_BLK ""
+#define B_RED ""
+#define B_GREN ""
+#define B_ORNG ""
+#define B_BLUE ""
+#define B_PURP ""
+#define B_CYAN ""
+#define B_WITE ""
+
+// Bright Colours
+#define B_LBLK ""
+#define B_LRED ""
+#define B_LGREN ""
+#define B_LORNG ""
+#define B_LBLUE ""
+#define B_LPURP ""
+#define B_LCYAN ""
+#define B_LWITE ""
+
+// No Colour
+#define B_NOCOL ""
+
+#endif // _Win32
 
 #endif
