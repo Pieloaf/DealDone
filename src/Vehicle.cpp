@@ -11,7 +11,7 @@ Vehicle::~Vehicle()
 
 }
 
-void Vehicle::displayVehicleDetails(){
+void Vehicle::displayVehicleDetails(){ // outputs vehicle infor in a longer format
     //TODO add bigger vehicle asci image
     cout << "***" << endl;
     cout << "Vehicle Name: " << model_name << endl;
@@ -24,10 +24,13 @@ void Vehicle::displayVehicleDetails(){
     cout << "***" << endl;
 }
 
-bool operator== (Vehicle &veh1, Vehicle &veh2){
+bool operator== (Vehicle &veh1, Vehicle &veh2){ // returns the outcome of the comparisong of all the data members in the two objects
     return (veh1.getModel_Name() == veh2.getModel_Name() && veh1.getVehicle_Manu() == veh2.getVehicle_Manu() && veh1.getVehicleColour() == veh2.getVehicleColour() && veh1.getPrice() == veh2.getPrice() && veh1.getSeats() == veh2.getSeats() && veh1.getYear() == veh2.getYear() && veh1.getDescription() == veh2.getDescription());
 }
-bool operator!= (Vehicle &veh1, Vehicle &veh2){
-
+bool operator!= (Vehicle &veh1, Vehicle &veh2){ // returns the inverse of the == operator
    return !(veh1 == veh2);
+}
+Vehicle& Vehicle::operator= (Vehicle &veh1)
+{
+
 }
