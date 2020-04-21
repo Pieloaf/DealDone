@@ -1,30 +1,33 @@
 #include "Air_Vehicle.h"
 
-Air_Vehicle::Air_Vehicle()
+Air_Vehicle::Air_Vehicle():Vehicle() // initializer list
 {
-    //ctor
+    max_air_speed = 0; // sets default values
+    flight_hours = 0;
 }
-Air_Vehicle::Air_Vehicle(Manufacturer m):Vehicle(m){
+Air_Vehicle::Air_Vehicle(Manufacturer m):Vehicle(m) // initlizer list
+{
+    Air_Vehicle(); // calls default constructor for default values
 }
 Air_Vehicle::~Air_Vehicle()
 {
     //dtor
 }
-void Air_Vehicle::displayVehicleBasics(){
+void Air_Vehicle::displayVehicleBasics(){ // Outputs basic data onto the console
     //TODO add small vehicle asci image
-    cout << getModel_Name() << endl;
+    cout << getModelName() << endl;
     cout << getYear() << " - " << getVehicleManuName() << " - " << flight_hours << " Hrs" << endl;
     cout << getPrice() << " €" << endl;
-
 }
-void Air_Vehicle::displayVehicleDetails(){
+void Air_Vehicle::displayVehicleDetails(){ // ouputs all the details of the vehicle
     Vehicle::displayVehicleDetails();
     cout << "Air Speed: " << max_air_speed << endl;
     cout << "Flight Hours: " << flight_hours << endl;
 }
-bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2){
-    return (veh1.getFlight_Hours() == veh2.getFlight_Hours() && veh1.getmax_Air_Speed() == veh2.getmax_Air_Speed() && veh1.getModel_Name() == veh2.getModel_Name() && veh1.getVehicle_Manu() == veh2.getVehicle_Manu() && veh1.getVehicleColour() == veh2.getVehicleColour() && veh1.getPrice() == veh2.getPrice() && veh1.getSeats() == veh2.getSeats() && veh1.getYear() == veh2.getYear() && veh1.getDescription() == veh2.getDescription());
+
+bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2){ // compares all datamembers between the two vehicles and returns the logic answer
+    return (veh1.getFlightHours() == veh2.getFlightHours() && veh1.getMaxAirSpeed() == veh2.getMaxAirSpeed() && veh1.getModelName() == veh2.getModelName() && veh1.getVehicleManu() == veh2.getVehicleManu() && veh1.getVehicleColour() == veh2.getVehicleColour() && veh1.getPrice() == veh2.getPrice() && veh1.getSeats() == veh2.getSeats() && veh1.getYear() == veh2.getYear() && veh1.getDescription() == veh2.getDescription());
 }
-bool operator!= (Air_Vehicle &veh1, Air_Vehicle &veh2){
+bool operator!= (Air_Vehicle &veh1, Air_Vehicle &veh2){ // gets the opposite of the == operator
     return !(veh1 == veh2);
 }

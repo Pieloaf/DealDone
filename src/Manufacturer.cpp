@@ -2,10 +2,12 @@
 
 Manufacturer::Manufacturer() // default constructor
 {
-    //ctor
+    name = "Unnamed Manufacturer";
+    product_type = "Undefined Product Type";
 }
-Manufacturer::Manufacturer(string n){ // user defined contrustor to add a name
+Manufacturer::Manufacturer(string n, string t){ // user defined contrustor to add a name
     name = n;
+    product_type = t;
 }
 Manufacturer::~Manufacturer()
 {

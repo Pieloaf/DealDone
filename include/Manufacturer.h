@@ -45,9 +45,9 @@ class Manufacturer
     protected:
 
     private:
-        /// Variables
+        /// Private Data Members
 
-        // Default Data types
+        // primitive data types
         string name;
         string product_type;
 

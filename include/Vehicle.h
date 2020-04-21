@@ -41,12 +41,12 @@ class Vehicle
         string getDescription() { return description; }
         void setDescription(string val) { description = val; }
 
-        string getModel_Name() { return model_name; }
-        void setModel_Name(string val) { model_name = val; }
+        string getModelName() { return model_name; }
+        void setModelName(string val) { model_name = val; }
 
         // User Defined Accessor and Mutators
 
-        Manufacturer getVehicle_Manu() { return vehicle_manu; }
+        Manufacturer getVehicleManu() { return vehicle_manu; }
         void setVehicleManu(Manufacturer m){ vehicle_manu = m; }
 
         string getVehicleManuName() { return vehicle_manu.getName(); } // this is a special accessor to get the name of the manufacturer
@@ -64,15 +64,13 @@ class Vehicle
     protected:
 
     private:
-        /// Variables
-        // simple data types
+        /// Data Members
+        // primitive data types
         unsigned int price;
         unsigned int seats;
         int year;
         string description;
         string model_name;
-
-        // constants
         string vehicle_colour;
 
         // complex data types
