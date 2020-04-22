@@ -26,11 +26,7 @@ StoreManager::StoreManager(User u, std::string sname):User(u.getName()) //initia
 }
 
 StoreManager::~StoreManager()
-{
-    // When a Store Manager Object is Deleted a User Object is created of the same name with all listed vehicles as owned vehicles
-    //User x(StoreManager::getName());
-    //for(int v = 0; v<listedVehicles.size(); v++){x.buy(listedVehicles[v]);}
-    
+{  
     numStores--; //decrements static variable
 }
 

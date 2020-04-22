@@ -23,9 +23,9 @@ Menu myAccount("My Account", false, &mainMenu);
 Menu* currentMenu = &mainMenu;
 StoreManager s1("John", "John's Motors");
 StoreManager s2("Mark", "Mark's Motors");
-vector <Vehicle>  allVehicles;
+vector <Vehicle>  allVehicles;*/
 
-*/int main()
+int main()
 {
 
 
@@ -41,7 +41,7 @@ vector <Vehicle>  allVehicles;
     cout<< "\n===== Welcome to DealDone Motor Sales =====\n" << endl;
 */
     User u1;
-   Manufacturer m1("Soyota");
+    Manufacturer m1("Soyota");
     m1.addColour("blue");
     m1.addColour("red");
     m1.addColour("green");
@@ -60,6 +60,12 @@ vector <Vehicle>  allVehicles;
 
     u1.buy(&v1);
     cout << u1 <<"\n";
+
+    cout << v1.getVehicleManuName()<<endl;
+    Manufacturer* z = v1.getVehicleManu();
+    z->setName("Ford");
+    cout << v1.getVehicleManuName();
+
 
     //cout << "store 1" <<endl;
     s1.displayListedVehicles();
@@ -80,6 +86,8 @@ vector <Vehicle>  allVehicles;
     int x = 5;
     int y =10;
     cout << x+y << endl;
+
+    cout << "----\n\n\n";
 
 /*    //signup("etc","123");
 

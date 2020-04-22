@@ -8,8 +8,10 @@ Vehicle::Vehicle()
     vehicle_colour = "No Colour";
     seats = 4;
     price = 0;
+    vehicle_manu = new Manufacturer;
 }
-Vehicle::Vehicle(Manufacturer m): vehicle_manu(m)
+
+Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m)
 {
     model_name = "Unamed Land Vehicle"; // sets default values
     description = "No Description";
@@ -21,7 +23,9 @@ Vehicle::Vehicle(Manufacturer m): vehicle_manu(m)
 
 Vehicle::~Vehicle()
 {
-
+    delete vehicle_manu;
+    vehicle_manu = 0;
+    cout << " destruct parent";
 }
 
 void Vehicle::displayVehicleDetails(){ // outputs vehicle infor in a longer format
@@ -29,7 +33,7 @@ void Vehicle::displayVehicleDetails(){ // outputs vehicle infor in a longer form
     cout << "***" << endl;
     cout << "Vehicle Name: " << model_name << endl;
     cout << "Year: " << year << endl;
-    cout << "Manufacturer: " << vehicle_manu.getName() << endl;
+    cout << "Manufacturer: " << vehicle_manu->getName() << endl;
     cout << "Colour: " << vehicle_colour << endl;
     cout << "Price: " << price << endl;
     cout << "Seat count: " << seats << endl;

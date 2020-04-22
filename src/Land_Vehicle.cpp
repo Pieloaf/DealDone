@@ -11,6 +11,7 @@ Land_Vehicle::Land_Vehicle(Manufacturer m1): Vehicle(m1) // initializer list
 }
 Land_Vehicle::~Land_Vehicle()
 {
+    cout << " destruct child ";
     //dtor
 }
 void Land_Vehicle::displayVehicleBasics(){ // outputs basic vehicle data

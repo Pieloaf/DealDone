@@ -45,11 +45,10 @@ class Vehicle
         void setModelName(string val) { model_name = val; }
 
         // User Defined Accessor and Mutators
+        Manufacturer* getVehicleManu() { return vehicle_manu; }
+        void setVehicleManu(Manufacturer m){ vehicle_manu = &m; }
 
-        Manufacturer getVehicleManu() { return vehicle_manu; }
-        void setVehicleManu(Manufacturer m){ vehicle_manu = m; }
-
-        string getVehicleManuName() { return vehicle_manu.getName(); } // this is a special accessor to get the name of the manufacturer
+        string getVehicleManuName() { return vehicle_manu->getName(); } // this is a special accessor to get the name of the manufacturer
 
 
         // User Defined Functions
@@ -73,7 +72,7 @@ class Vehicle
         string vehicle_colour;
 
         // complex data types
-        Manufacturer vehicle_manu;
+        Manufacturer* vehicle_manu;
 
 };
 
