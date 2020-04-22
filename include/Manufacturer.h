@@ -19,6 +19,7 @@ class Manufacturer
         virtual ~Manufacturer();
 
         // User Defined constructors
+        Manufacturer(string n);
         Manufacturer(string n,string t);
 
         /// Function Declarations

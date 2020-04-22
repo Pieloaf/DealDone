@@ -31,6 +31,8 @@ class Land_Vehicle : public Vehicle
         void displayVehicleBasics();
         void displayVehicleDetails();
 
+        Land_Vehicle& operator= (Land_Vehicle &veh1);
+
         // Friend Functions
         friend bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2);
         friend bool operator!= (Land_Vehicle &veh1, Land_Vehicle &veh2);

@@ -5,7 +5,13 @@ Manufacturer::Manufacturer() // default constructor
     name = "Unnamed Manufacturer";
     product_type = "Undefined Product Type";
 }
-Manufacturer::Manufacturer(string n, string t){ // user defined contrustor to add a name
+
+Manufacturer::Manufacturer(string n){ // user defined contrustor to add a name
+    name = n;
+    product_type = "Undefined Product Type";
+}
+
+Manufacturer::Manufacturer(string n, string t){ // user defined contrustor to add a name and type
     name = n;
     product_type = t;
 }
@@ -20,7 +26,7 @@ void Manufacturer::addColour(string colour_name){ // adds an offered colour to t
 
 void Manufacturer::removeColour(string colour_name){
 
-    for(int i = 0; i < colour_list.size(); i++){ // runs through the whole vector to find the collour
+    for(int i = 0; i < int(colour_list.size()); i++){ // runs through the whole vector to find the collour
         if (colour_list[i] == colour_name){ // checks that the colours match
             colour_list.erase(colour_list.begin() + i); // deletes the colour
         }
@@ -28,7 +34,7 @@ void Manufacturer::removeColour(string colour_name){
 }
 
 void Manufacturer::listColours(){
-    for(int i = 0; i < colour_list.size(); i++){ // runs through the vector to output the colours
+    for(int i = 0; i < int(colour_list.size()); i++){ // runs through the vector to output the colours
         cout << colour_list[i] << endl;
     }
 }
@@ -52,10 +58,10 @@ bool operator== (Manufacturer m1, Manufacturer m2){
             vector <string> m2_col = m2.getColour_List();
             string tested_col;
 
-            for(int i = 0; i < m1_col.size(); i++){ // runs through one vector
+            for(int i = 0; i < int(m1_col.size()); i++){ // runs through one vector
                 tested_col = m1_col[i]; // stores the colour for comparison
 
-                for(int j = 0; j < m2_col.size(); j++){ // runs through the other vector
+                for(int j = 0; j < int(m2_col.size()); j++){ // runs through the other vector
                     if(tested_col == m2_col[j]){ // if the tested colour is found in thhe other vector
                         m2_col.erase(m2_col.begin() + j); // erases it from the inner vector and breaks
                         break;

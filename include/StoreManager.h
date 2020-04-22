@@ -1,35 +1,50 @@
 #ifndef STOREMANAGER_H
 #define STOREMANAGER_H
 
-#include <iostream>
-#include <vector>
-#include <string>
 #include <User.h>
+
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
 
 class StoreManager : public User
 {
      public:
-//        StoreManager();
-          StoreManager(std::string uname, std::string sname);
+          // default constructors
           virtual ~StoreManager();
+          //user defined constructors
+          StoreManager(string uname, string sname);
+          StoreManager(User u, string sname);
 
+          /// Function Declarations
+          // Generated Accessors and Mutators
+          void setStoreName( string val ){ storeName=val; }
+          string getStoreName(){ return storeName; }
+
+          void setDescription( string val ){ description=val; }
+          string getDescription(){ return description; }
+          
+          // User Defined Accessors and Mutators
+          void addVehicle(Vehicle* v){ listedVehicles.push_back(v); }
+          void unlistVehicle(int i);
+
+          // User Defined Functions
           void displayListedVehicles();
-          void addVehicle(Vehicle* v){ listedVehicles.push_back(v); };
-          void removeVehicle(int i);
-
-          void setStoreName( std::string val ){ storeName=val; }
-          std::string getStoreName(){ return storeName; }
-
-          void setDescription( std::string val ){ description=val; }
-          std::string getDescription(){ return description; }
+          void sell(User &u, Vehicle* v);
           void listDetails();
 
      protected:
 
      private:
+          /// Data Members
+          // primitive data types
           static int numStores;
-          std::vector<Vehicle*> listedVehicles;
-          std::string storeName;
-          std::string description;
+          string storeName;
+          string description;
+
+          // vectors
+          vector<Vehicle*> listedVehicles;
+
 };
 #endif

@@ -6,28 +6,47 @@
 #include <vector>
 
 #include "Vehicle.h"
-//#include "StoreManager.h"
-
 #include "Colours.h"
+
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
+using std::ostream;
+
 class User
 {
    public:
-//        User();
-        User(std::string usrname);
+        //default constructors
+        User();
         virtual ~User();
+        // user defined constructors
+        User(string usrname);
 
-        //void setName( std::string val ){ name=val; }
-        std::string getName(){ return name; }
+        //Function Declarations 
+        // Generated Accessors and Mutators
+        string getName(){ return name; }
 
+        // User Defined Accessors and Mutators
+        void buy( Vehicle* v ){ ownedVehicles.push_back(v); }
+        void removeVehicle(Vehicle* v);
+        int numVehicles(){return ownedVehicles.size();}
+        Vehicle* getVehicle(int i){return ownedVehicles[i];}
+
+        //User Defined Functions
         void myVehicles();
         void listDetails();
 
-        void buy( Vehicle* v ){ ownedVehicles.push_back(v); }
+        friend ostream& operator<< (ostream&, const User&);
 
    protected:
 
    private:
-        const std::string name;
+        /// Data Members
+        // primitive data types
+        const string name;
+
+        // vectors
         vector<Vehicle*> ownedVehicles;
 };
 #endif
