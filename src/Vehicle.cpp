@@ -10,7 +10,13 @@ Vehicle::Vehicle()
     price = 0;
 }
 Vehicle::Vehicle(Manufacturer m): vehicle_manu(m){ // initialliser list
-    Vehicle();
+
+    model_name = "Unamed Land Vehicle"; // sets default values
+    description = "No Description";
+    year = 1982;
+    vehicle_colour = "No Colour";
+    seats = 4;
+    price = 0;
 }
 Vehicle::~Vehicle()
 {
@@ -36,7 +42,8 @@ bool operator== (Vehicle &veh1, Vehicle &veh2){ // returns the outcome of the co
 bool operator!= (Vehicle &veh1, Vehicle &veh2){ // returns the inverse of the == operator
    return !(veh1 == veh2);
 }
-Vehicle& Vehicle::operator= (Vehicle &veh1)
+Vehicle& Vehicle::operator= (Vehicle& veh1)
 {
-
+    cout << "yo";
+    return veh1;
 }

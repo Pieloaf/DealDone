@@ -53,13 +53,15 @@ class Vehicle
 
 
         // User Defined Functions
-        virtual void displayVehicleBasics() = 0; // fully virtual as vehicle objects do not need this function
-        virtual void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
+        void displayVehicleBasics(); // fully virtual as vehicle objects do not need this function
+        void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
+
+        Vehicle& operator= (Vehicle& veh1);
 
         // Friend Functions
         friend bool operator== (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons
         friend bool operator!= (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons
-        Vehicle& operator =(Vehicle &veh1);
+
 
     protected:
 
