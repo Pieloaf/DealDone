@@ -1,7 +1,8 @@
 # DealDone
 
 DT021/A Year 2 - Software Design Project
-```               i X z X Y m X X n
+```               
+                 i X z X Y m X X n
              + ^         |       \\
        '  c 1 (          x       + c i
    / $ $ $ $ $ $ & $ $ m # $ $ $ $ $ $ * J
