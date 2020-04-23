@@ -19,22 +19,24 @@ class StoreManager : public User
 
           /// Function Declarations
           // Generated Accessors and Mutators
-          void setStoreName( string val ){ storeName=val; }
-          string getStoreName(){ return storeName; }
+          void setStoreName( string val ){ store_name = val; }
+          string getStoreName(){ return store_name; }
 
-          void setDescription( string val ){ description=val; }
+          void setDescription( string val ){ description = val; }
           string getDescription(){ return description; }
-          
+
+          int getNumStores(){ return num_stores; }
+
           // User Defined Accessors and Mutators
-          void addVehicle(Vehicle* v){ listedVehicles.push_back(v); }
+          void addListedVehicle(Vehicle* v){ listed_vehicles.push_back(v); }
           void unlistVehicle(int i);
 
           // User Defined Functions
-          void displayListedVehicles();
-          void sell(User &u, Vehicle* v);
-          void listDetails();
-          int getNumStores(){return numStores;}
-          Vehicle* getListedVehicle(int i){return listedVehicles[i];}
+          void displayListedVehicles(); // Displays all the vehicles for sale
+          void sellListedVehicle(User &u, Vehicle* v); // Removes a listed vehicle and adds it to the user's owned vehicles
+          void listDetails(); // outputs all objects data into the terminal
+          int getNumStores(){return num_stores;}
+          Vehicle* getListedVehicle(int i){return listed_vehicles[i];}
 
           friend ostream& operator<< (ostream&, const StoreManager&);
 
@@ -43,12 +45,12 @@ class StoreManager : public User
      private:
           /// Data Members
           // primitive data types
-          static int numStores;
-          string storeName;
+          static int num_stores;
+          string store_name;
           string description;
 
           // vectors
-          vector<Vehicle*> listedVehicles;
+          vector<Vehicle*> listed_vehicles;
 
 };
 #endif

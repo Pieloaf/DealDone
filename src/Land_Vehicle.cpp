@@ -3,7 +3,7 @@
 Land_Vehicle::Land_Vehicle(): Vehicle() // iniatlizer list
 {
     doors = 4; // sets default values
-    transmission = "Undefined Transmission Type";
+    transmission = "Undefined";
     mileage = 0;
 }
 Land_Vehicle::Land_Vehicle(Manufacturer m1): Vehicle(m1) // initializer list
@@ -15,19 +15,20 @@ Land_Vehicle::~Land_Vehicle()
     //dtor
 }
 void Land_Vehicle::displayVehicleBasics(){ // outputs basic vehicle data
-    //TODO add small vehicle asci image
     cout << getModelName() << endl;
-    cout << getYear() << " - " << getVehicleManuName() << " - " << getMileage() << " km" << endl;
-    cout << getPrice() << " €" << endl;
+    cout << LBLUE << getYear() << " - " << getVehicleManuName() << " - " << getMileage() << " km" << endl;
+    cout << LGREN <<getPrice() << " €" << NOCOL<< endl;
 
 }
-void Land_Vehicle::displayVehicleDetails(){ // outputs vehicle data
-    //TODO add small vehicle asci image
-    Vehicle::displayVehicleDetails();
+void Land_Vehicle::displayVehicleDetails(){ // overwritten function that outputs vehicle data
+    cout << LGREN << "***" << endl; // changes colour ***see colours.h***
+    Vehicle::displayVehicleDetails(); // calls parent version for more details
+    // land vehicle details
     cout << "Num of Door: " << doors << endl;
-    cout << "Transmission Type: " << transmission << endl;
+    cout << "Transmission Type: " << transmission << NOCOL << endl;
+    cout << "***" << endl;
 }
-bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2){ // compares all data members to see if they are equal
+bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2){ // all data members to see if they are equal and returns the outcome
     return (veh1.getDoors() == veh2.getDoors()
              && veh1.getTransmission() == veh2.getTransmission()
              && veh1.getModelName() == veh2.getModelName()
@@ -41,7 +42,7 @@ bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2){ // compares all data m
 bool operator!= (Land_Vehicle &veh1, Land_Vehicle &veh2){ // gets the inverse of the == operator
     return !(veh1 == veh2);
 }
-Land_Vehicle& Land_Vehicle::operator= (Land_Vehicle &veh1){ // emulates a "true equals" as to allow for object cloning
+void Land_Vehicle::operator= (Land_Vehicle &veh1){ // emulates a "true equals" as to allow for easy object cloning
     /// Sets the various data members of the selected object to that of the other object
     // Vehicle data members
     this->setModelName(veh1.getModelName());
@@ -49,9 +50,7 @@ Land_Vehicle& Land_Vehicle::operator= (Land_Vehicle &veh1){ // emulates a "true 
     this->setVehicleColour(veh1.getVehicleColour());
     this->setYear(veh1.getYear());
     this->setSeats(veh1.getSeats());
-
-    Manufacturer* tempmanu = veh1.getVehicleManu(); // creates a temporary object inorder to dereference the manufacturer pointer
-    this->setVehicleManu(tempmanu);
+    this->setVehicleManu(veh1.getVehicleManu());
 
     //Land Vehicle data members
     this->setTransmission(veh1.getTransmission());

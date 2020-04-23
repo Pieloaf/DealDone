@@ -1,11 +1,13 @@
 #include "User.h"
 
-User::User():name("guest") //initialiser list
+User::User():name("Guest") //initialiser list
 {
+
 }
 
-User::User(std::string usrname):name(usrname) //initiliser list
+User::User(std::string usrname):name(usrname) //initialiser list
 {
+
 }
 
 User::~User()
@@ -16,33 +18,32 @@ User::~User()
 void User::myVehicles(){
 
 	//iterates through owned vehicles vector and prints out the index+1 and model_name of all objects in the vector
-	for (int i = 0; i < int(ownedVehicles.size()); i++)
+	for (int i = 0;i < int(owned_vehicles.size()); i++)
 	{
-		cout << "\t" << i+1 << ". " << ownedVehicles[i]->getModelName() << endl;
+		cout << i+1 << ". " << owned_vehicles[i]->getModelName() << endl;
 	}
 }
 
 void User::listDetails()
 {
-	//prints the User objects name data member and the number of Vehicle objects in the ownedVehicles vector 
-	cout << "User Name: \t" << name << endl;
-	cout << "Owned Vehicles: " << ownedVehicles.size() << endl;
+	//prints the User objects name data member and the Vehicle objects in the owned_vehicles vector
+	cout << "User Name: " << name << endl;
+	cout << "Owned Vehicles: " << endl;
+	myVehicles();
 }
-void User::removeVehicle(Vehicle* v)
+void User::removeOwnedVehicle(Vehicle* v)
 {
-	// itterates to the given vehicle object from the ownedVehicles vector and removes it from the vector
-	for(int x=0; x<int(ownedVehicles.size()-1); x++)
+	// itterates to the given vehicle object from the owned_vehicles vector and removes it from the vector
+	for(int x=0;x < int(owned_vehicles.size()); x++)
     {
-		int i = x--;
-        if (v==ownedVehicles[x])
-			ownedVehicles.erase(ownedVehicles.begin()+i);
+        if (v == owned_vehicles[x])
+			owned_vehicles.erase(owned_vehicles.begin() + x);
 		break;
     }
 }
-
-ostream& operator<< (ostream& ostr, const User& u)
+ostream& operator<< (ostream& ostr, const User& u) // outputs basic user data when
 {
 	ostr << "User Name: \t" << u.name << endl;
-	ostr << "Owned Vehicles: " << u.ownedVehicles.size() << endl;
+	ostr << "Owned Vehicles: " << u.owned_vehicles.size() << endl;
 	return ostr;
 }

@@ -20,9 +20,12 @@ void Air_Vehicle::displayVehicleBasics(){ // Outputs basic data onto the console
     cout << getPrice() << " €" << endl;
 }
 void Air_Vehicle::displayVehicleDetails(){ // ouputs all the details of the vehicle
-    Vehicle::displayVehicleDetails();
+    cout << LBLUE << "***" << endl; // sets colour *** see colour.h for more info***
+    Vehicle::displayVehicleDetails(); // calls parent function for more details
+    // air vehicle details
     cout << "Air Speed: " << max_air_speed << endl;
     cout << "Flight Hours: " << flight_hours << endl;
+    cout << "***" << NOCOL << endl; // removes colour
 }
 
 bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2){ // compares all datamembers between the two vehicles and returns the logic answer
@@ -40,7 +43,7 @@ bool operator!= (Air_Vehicle &veh1, Air_Vehicle &veh2){ // gets the opposite of 
     return !(veh1 == veh2);
 }
 
-Air_Vehicle& Air_Vehicle::operator= (Air_Vehicle &veh1){ // emulates a "true equals" as to allow for object cloning
+void Air_Vehicle::operator= (Air_Vehicle &veh1){ // emulates a "true equals" as to allow for object cloning
     /// Sets the various data members of the selected object to that of the other object
     // Vehicle data members
     this->setModelName(veh1.getModelName());
@@ -48,9 +51,7 @@ Air_Vehicle& Air_Vehicle::operator= (Air_Vehicle &veh1){ // emulates a "true equ
     this->setVehicleColour(veh1.getVehicleColour());
     this->setYear(veh1.getYear());
     this->setSeats(veh1.getSeats());
-
-    Manufacturer* tempmanu = veh1.getVehicleManu(); // creates a temporary object inorder to dereference the manufacturer pointer
-    this->setVehicleManu(tempmanu);
+    this->setVehicleManu(veh1.getVehicleManu());
 
     //Air Vehicle data members
     this->setFlightHours(veh1.getFlightHours());

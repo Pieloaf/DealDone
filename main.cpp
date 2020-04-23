@@ -62,8 +62,8 @@ int main()
     v2.getVehicleManu()->setName("Boewing");
     v2.setModelName("747");
 
-    s1.addVehicle(&v1);
-    s1.addVehicle(&v2);
+    s1.addListedVehicle(&v1);
+    s1.addListedVehicle(&v2);
     cout << "\n===========\nv1 Details:\n";
     s1.getListedVehicle(0)->displayVehicleDetails();
     cout << "\n===========\nv2 Details:\n";

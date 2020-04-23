@@ -23,21 +23,30 @@ class User
         // user defined constructors
         User(string usrname);
 
-        //Function Declarations 
+        //Function Declarations
         // Generated Accessors and Mutators
         string getName(){ return name; }
 
         // User Defined Accessors and Mutators
-        void buy( Vehicle* v ){ ownedVehicles.push_back(v); }
-        void removeVehicle(Vehicle* v);
-        int numVehicles(){return ownedVehicles.size();}
-        Vehicle* getOwnedVehicle(int i){return ownedVehicles[i];}
+        void buyVehicle( Vehicle* v ){ owned_vehicles.push_back(v); } // adds a new owned vehicle to the vector
+        void removeOwnedVehicle(Vehicle* v); // removes a vehicle that is the same as inputted object
+        int numVehicles(){return owned_vehicles.size();}
+        Vehicle* getOwnedVehicle(int i){return owned_vehicles[i];}
+        
 
-        //User Defined Functions
-        void myVehicles();
-        void listDetails();
+        int numOwnedVehicles(){return owned_vehicles.size();} // special accessor to get the number of owned vehicles
+        Vehicle* getOwnedVehicle(int i){ return owned_vehicles[i]; } // special accessor to return a specific vehicle
 
-        friend ostream& operator<< (ostream&, const User&);
+        void setOwnedVehicleVec(vector<Vehicle*> vec) { owned_vehicles = vec; } // copies the inputted vehicle vector
+        vector<Vehicle*> getOwnedVehicleVec(){ return owned_vehicles; }
+
+
+        //User Defined Member Functions
+        void myVehicles(); // ouptuts all owned vehicles into the terminal
+        void listDetails(); // lists basic details about the user
+
+        //Friend Functions
+        friend ostream& operator<< (ostream&, const User&); // overloaded output operator to allow for easy output of data.
 
    protected:
 
@@ -47,6 +56,6 @@ class User
         const string name;
 
         // vectors
-        vector<Vehicle*> ownedVehicles;
+        vector<Vehicle*> owned_vehicles;
 };
 #endif

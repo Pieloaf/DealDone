@@ -31,10 +31,10 @@ class Land_Vehicle : public Vehicle
         void displayVehicleBasics();
         void displayVehicleDetails();
 
-        Land_Vehicle& operator= (Land_Vehicle &veh1);
+        void operator= (Land_Vehicle &veh1); // overloaded equals operator. It acts as a true equals and makes all the data members the same.
 
         // Friend Functions
-        friend bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2);
+        friend bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2); // overloaded comparison operators, these will check that all the data members are equal/not equal
         friend bool operator!= (Land_Vehicle &veh1, Land_Vehicle &veh2);
 
 
