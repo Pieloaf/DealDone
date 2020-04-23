@@ -8,7 +8,7 @@ Vehicle::Vehicle()
     vehicle_colour = "No Colour";
     seats = 4;
     price = 0;
-    vehicle_manu = new Manufacturer;
+    vehicle_manu = new Manufacturer; //dynamically creates new object of Manufacturer Class
 }
 
 Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m)
@@ -23,8 +23,8 @@ Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m)
 
 Vehicle::~Vehicle()
 {
-    delete vehicle_manu;
-    vehicle_manu = 0;
+    delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
+    vehicle_manu = 0;   // sets ptr to 0 to prevent dangling ptr
     cout << " destruct parent";
 }
 
