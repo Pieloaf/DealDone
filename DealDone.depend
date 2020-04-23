@@ -311,7 +311,7 @@
 	"User.h"
 	"StoreManager.h"
 
-1587584316 source:/home/ryan/Downloads/DealDone/main.cpp
+1587650722 source:/home/ryan/Downloads/DealDone/main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -323,7 +323,7 @@
 	"User.h"
 	"StoreManager.h"
 
-1587584253 /home/ryan/Downloads/DealDone/include/Vehicle.h
+1587640825 /home/ryan/Downloads/DealDone/include/Vehicle.h
 	<vector>
 	<string>
 	<iostream>
@@ -331,45 +331,45 @@
 	"Vehicle.h"
 	"Colours.h"
 
-1587580322 /home/ryan/Downloads/DealDone/include/Manufacturer.h
+1587649745 /home/ryan/Downloads/DealDone/include/Manufacturer.h
 	<vector>
 	<string>
 	<iostream>
 	"Colours.h"
 
-1587498463 /home/ryan/Downloads/DealDone/include/Colours.h
+1587650823 /home/ryan/Downloads/DealDone/include/Colours.h
 
-1587583544 /home/ryan/Downloads/DealDone/include/Air_Vehicle.h
+1587649744 /home/ryan/Downloads/DealDone/include/Air_Vehicle.h
 	<Vehicle.h>
 
-1587582215 /home/ryan/Downloads/DealDone/include/Land_Vehicle.h
+1587649744 /home/ryan/Downloads/DealDone/include/Land_Vehicle.h
 	<Vehicle.h>
 
-1587580322 /home/ryan/Downloads/DealDone/include/User.h
+1587649804 /home/ryan/Downloads/DealDone/include/User.h
 	<iostream>
 	<string>
 	<vector>
 	"Vehicle.h"
 	"Colours.h"
 
-1587580322 /home/ryan/Downloads/DealDone/include/StoreManager.h
+1587648153 /home/ryan/Downloads/DealDone/include/StoreManager.h
 	<User.h>
 
-1587583497 source:/home/ryan/Downloads/DealDone/src/Air_Vehicle.cpp
+1587649437 source:/home/ryan/Downloads/DealDone/src/Air_Vehicle.cpp
 	"Air_Vehicle.h"
 
-1587584228 source:/home/ryan/Downloads/DealDone/src/Land_Vehicle.cpp
+1587649487 source:/home/ryan/Downloads/DealDone/src/Land_Vehicle.cpp
 	"Land_Vehicle.h"
 
-1587580322 source:/home/ryan/Downloads/DealDone/src/Manufacturer.cpp
+1587638384 source:/home/ryan/Downloads/DealDone/src/Manufacturer.cpp
 	"Manufacturer.h"
 
-1587580322 source:/home/ryan/Downloads/DealDone/src/StoreManager.cpp
+1587648567 source:/home/ryan/Downloads/DealDone/src/StoreManager.cpp
 	"StoreManager.h"
 
-1587580322 source:/home/ryan/Downloads/DealDone/src/User.cpp
+1587643222 source:/home/ryan/Downloads/DealDone/src/User.cpp
 	"User.h"
 
-1587582370 source:/home/ryan/Downloads/DealDone/src/Vehicle.cpp
+1587649280 source:/home/ryan/Downloads/DealDone/src/Vehicle.cpp
 	"Vehicle.h"
 
