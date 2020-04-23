@@ -25,8 +25,8 @@ void Land_Vehicle::displayVehicleDetails(){ // overwritten function that outputs
     Vehicle::displayVehicleDetails(); // calls parent version for more details
     // land vehicle details
     cout << "Num of Door: " << doors << endl;
-    cout << "Transmission Type: " << transmission << NOCOL << endl;
-    cout << "***" << endl;
+    cout << "Transmission Type: " << transmission << endl;
+    cout << "***" << NOCOL << endl;
 }
 bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2){ // all data members to see if they are equal and returns the outcome
     return (veh1.getDoors() == veh2.getDoors()

@@ -35,7 +35,6 @@ class StoreManager : public User
           void displayListedVehicles(); // Displays all the vehicles for sale
           void sellListedVehicle(User &u, Vehicle* v); // Removes a listed vehicle and adds it to the user's owned vehicles
           void listDetails(); // outputs all objects data into the terminal
-          int getNumStores(){return num_stores;}
           Vehicle* getListedVehicle(int i){return listed_vehicles[i];}
 
           friend ostream& operator<< (ostream&, const StoreManager&);
