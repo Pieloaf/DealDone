@@ -45,17 +45,14 @@ class Vehicle
         void setModelName(string val) { model_name = val; }
 
         // User Defined Accessor and Mutators
-        Manufacturer* getVehicleManu() { return vehicle_manu; }
-        void setVehicleManu(Manufacturer m){ vehicle_manu = &m; }
-        void setVehicleManu(Manufacturer* m){ vehicle_manu = m; }
+        Manufacturer* getVehicleManu() { return vehicle_manu; };
+        void setVehicleManu(Manufacturer* m){ vehicle_manu = m; } // Sets the manufacturer using a pointer. !!!Ensure the object is dynamically allocated!!!
         string getVehicleManuName() { return vehicle_manu->getName(); } // this is a special accessor to get the name of the manufacturer
 
 
         // User Defined Functions
-        void displayVehicleBasics(); // fully virtual as vehicle objects do not need this function
-        void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
-
-        Vehicle& operator= (Vehicle& veh1);
+        virtual void displayVehicleBasics() = 0; // fully virtual as vehicle objects do not need this function
+        virtual void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
 
         // Friend Functions
         friend bool operator== (Vehicle &veh1, Vehicle &veh2); // overloaded as to allow for easy comparisons

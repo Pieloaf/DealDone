@@ -26,15 +26,14 @@ class Air_Vehicle : public Vehicle
         // User Defined Accessors and Mutators
 
         // User Defined Functions
-
-        Air_Vehicle& operator= (Air_Vehicle &veh1);
+        void operator= (Air_Vehicle &veh1);  // overloaded equals operator. It acts as a true equals and makes all the data members the same.
 
         // Overwritten Functions
-        void displayVehicleBasics();
-        void displayVehicleDetails();
+        void displayVehicleBasics(); // displays basic vehicle info
+        void displayVehicleDetails(); // display full vehicle details
 
         //friend functions
-        friend bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2);
+        friend bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2);  // overloaded comparison operators, these will check that all the data members are equal/not equal
         friend bool operator!= (Air_Vehicle &veh1, Air_Vehicle &veh2);
 
     protected:

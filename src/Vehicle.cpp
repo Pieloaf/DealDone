@@ -2,7 +2,8 @@
 
 Vehicle::Vehicle()
 {
-    model_name = "Unamed Land Vehicle"; // sets default values
+    // setting default values
+    model_name = "Unamed Land Vehicle";
     description = "No Description";
     year = 1982;
     vehicle_colour = "No Colour";
@@ -11,9 +12,10 @@ Vehicle::Vehicle()
     vehicle_manu = new Manufacturer; //dynamically creates new object of Manufacturer Class
 }
 
-Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m)
+Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m) // Ensure that the passed in manufacturer is a dynamically creates object
 {
-    model_name = "Unamed Land Vehicle"; // sets default values
+    // setting default values
+    model_name = "Unamed Land Vehicle";
     description = "No Description";
     year = 1982;
     vehicle_colour = "No Colour";
@@ -25,12 +27,9 @@ Vehicle::~Vehicle()
 {
     delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
     vehicle_manu = 0;   // sets ptr to 0 to prevent dangling ptr
-    cout << " destruct parent";
 }
 
-void Vehicle::displayVehicleDetails(){ // outputs vehicle infor in a longer format
-    //TODO add bigger vehicle asci image
-    cout << "***" << endl;
+void Vehicle::displayVehicleDetails(){ // outputs vehicle info in a longer format into the terminal
     cout << "Vehicle Name: " << model_name << endl;
     cout << "Year: " << year << endl;
     cout << "Manufacturer: " << vehicle_manu->getName() << endl;
@@ -38,7 +37,6 @@ void Vehicle::displayVehicleDetails(){ // outputs vehicle infor in a longer form
     cout << "Price: " << price << endl;
     cout << "Seat count: " << seats << endl;
     cout << "Description:" << description << endl;
-    cout << "***" << endl;
 }
 
 bool operator== (Vehicle &veh1, Vehicle &veh2){ // returns the outcome of the comparisong of all the data members in the two objects

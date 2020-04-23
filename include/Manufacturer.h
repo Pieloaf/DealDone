@@ -33,16 +33,17 @@ class Manufacturer
         // User Defined mutators and accessors
         void addColour(string colour);
         void removeColour(string colour);
+        void setColour_List(vector<string> c){ colour_list = c; } // sets the colour vector
         vector<string> getColour_List() { return colour_list; } // returns all of the colour vector
 
         // User Defined Functions
         void listColours();
         void manuDetails();
 
+        void operator= (Manufacturer& m1); // overloaded equals operator. It acts as a true equals and makes all the data members the same.
         // Friend Functions
-        friend bool operator== (Manufacturer m1, Manufacturer m2); // overloadeded as to allow ease of comparison
-        friend bool operator!= (Manufacturer m1, Manufacturer m2); // overloadeded as to allow ease of comparison
-
+        friend bool operator== (Manufacturer m1, Manufacturer m2);  // overloaded comparison operators, these will check that all the data members are equal/not equal
+        friend bool operator!= (Manufacturer m1, Manufacturer m2);
     protected:
 
     private:

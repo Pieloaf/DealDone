@@ -2,11 +2,13 @@
 
 Manufacturer::Manufacturer() // default constructor
 {
+    // setting default values
     name = "Unnamed Manufacturer";
     product_type = "Undefined Product Type";
 }
 
 Manufacturer::Manufacturer(string n){ // user defined contrustor to add a name
+    // setting default values
     name = n;
     product_type = "Undefined Product Type";
 }
@@ -46,6 +48,13 @@ void Manufacturer::manuDetails(){ // ouputs manufacturer info into the console
     Manufacturer::listColours(); // lists all the offered colours
 }
 
+void Manufacturer::operator= (Manufacturer& m1){ // acts as a "true equals" for manufacturer objects
+    /// Sets the various data members of the selected object to that of the other object
+    // Manufacturer Data members
+    this->setName(m1.getName());
+    this->setProductType(m1.getProductType());
+    this->setColour_List(m1.getColour_List());
+}
 
 bool operator== (Manufacturer m1, Manufacturer m2){
 
@@ -76,7 +85,7 @@ bool operator== (Manufacturer m1, Manufacturer m2){
         }
     }
 
-    else return false; // return false if the two vectors are of different lengths
+    else return false; // return false if the two vectors are of different lengths as they cant be equal then
 }
 bool operator!= (Manufacturer m1, Manufacturer m2){ // returns the opposite of the == operator
     return !(m1 == m2);
