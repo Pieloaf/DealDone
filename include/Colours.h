@@ -13,53 +13,62 @@ Last Updated: 10/03/20
 #ifdef linux
 /// Text Colour Codes
 // Normal Colours
-#define BLK "\x1B[30m"
-#define RED "\x1B[31m"
-#define GREN "\x1B[32m"
-#define ORNG "\x1B[33m"
-#define BLUE "\x1B[34m"
-#define PURP "\x1B[35m"
-#define CYAN "\x1B[36m"
-#define WITE "\x1B[37m"
+#define BLK "\x1B[30m" // black
+#define RED "\x1B[31m" // red
+#define GREN "\x1B[32m" // green
+#define ORNG "\x1B[33m" // orange
+#define BLUE "\x1B[34m" // blue
+#define PURP "\x1B[35m" // purple
+#define CYAN "\x1B[36m" // cyan
+#define WITE "\x1B[37m" // white
 
 //Bright Colours
-#define LBLK "\x1B[90m"
-#define LRED "\x1B[91m"
-#define LGREN "\x1B[92m"
-#define LORNG "\x1B[93m"
-#define LBLUE "\x1B[94m"
-#define LPURP "\x1B[95m"
-#define LCYAN "\x1B[96m"
-#define LGREY "\x1B[97m"
-#define LWITE "\x1B[98m"
+#define LBLK "\x1B[90m" // light black
+#define LRED "\x1B[91m" // light red
+#define LGREN "\x1B[92m" // light green
+#define LORNG "\x1B[93m" // light orange
+#define LBLUE "\x1B[94m" // light blue
+#define LPURP "\x1B[95m" // light purple
+#define LCYAN "\x1B[96m" // light cyan
+#define LGREY "\x1B[97m" // light grey
+#define LWITE "\x1B[98m" // light white
 
 // No Colour
-#define NOCOL "\x1B[39m"
+#define NOCOL "\x1B[39m" // no colour
 
 
 /// Background Colour Codes
 // Normal Colours
-#define B_BLK "\x1B[40m"
-#define B_RED "\x1B[41m"
-#define B_GREN "\x1B[42m"
-#define B_ORNG "\x1B[43m"
-#define B_BLUE "\x1B[44m"
-#define B_PURP "\x1B[45m"
-#define B_CYAN "\x1B[46m"
-#define B_WITE "\x1B[47m"
+#define B_BLK "\x1B[40m" // black background
+#define B_RED "\x1B[41m" // red background
+#define B_GREN "\x1B[42m" // green background
+#define B_ORNG "\x1B[43m" // orange background
+#define B_BLUE "\x1B[44m" // blue background
+#define B_PURP "\x1B[45m" // purple background
+#define B_CYAN "\x1B[46m" // cyan background
+#define B_WITE "\x1B[47m" // white background
 
 // Bright Colours
-#define B_LBLK "\x1B[100m"
-#define B_LRED "\x1B[101m"
-#define B_LGREN "\x1B[102m"
-#define B_LORNG "\x1B[103m"
-#define B_LBLUE "\x1B[104m"
-#define B_LPURP "\x1B[105m"
-#define B_LCYAN "\x1B[106m"
-#define B_LWITE "\x1B[107m"
+#define B_LBLK "\x1B[100m" // light black background
+#define B_LRED "\x1B[101m" // light red background
+#define B_LGREN "\x1B[102m" // light green background
+#define B_LORNG "\x1B[103m" // light orange background
+#define B_LBLUE "\x1B[104m" // light blue background
+#define B_LPURP "\x1B[105m" // light purple background
+#define B_LCYAN "\x1B[106m" // light cyan background
+#define B_LWITE "\x1B[107m" // light white background
 
 // No Colour
-#define B_NOCOL "\x1B[49m"
+#define B_NOCOL "\x1B[49m" // removes colour
+
+// Effects
+#define BOLD "\x1B[1m" // bold text
+#define SLO_BLINK "\x1B[5m" // slow blink
+#define FST_BLINK "\x1B[6m" // fast blink
+#define NO_BLINK "\x1B[25m" // no blink
+
+// ***REMOVE ALL***
+#define GO_AWAY "\x1B[0m" // removes all effects
 
 #endif // linux
 
@@ -113,6 +122,15 @@ Last Updated: 10/03/20
 
 // No Colour
 #define B_NOCOL ""
+
+// Effects
+#define BOLD ""
+#define SLO_BLINK ""
+#define FST_BLINK ""
+#define NO_BLINK ""
+
+// ***REMOVE ALL***
+#define GO_AWAY ""
 
 #endif // _Win32
 
