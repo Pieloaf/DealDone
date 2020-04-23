@@ -16,8 +16,8 @@ StoreManager::StoreManager(User u, std::string sname):User(u.getName()) //initia
     // copies all elements from one vector to another
     for (int x=0; x<u.numVehicles(); x++)
     {
-        addVehicle(getVehicle(x));
-        removeVehicle(getVehicle(x));
+        addVehicle(getListedVehicle(x));
+        removeVehicle(getListedVehicle(x));
         u.~User();
     }
 
@@ -68,4 +68,11 @@ void StoreManager::sell(User& u, Vehicle* v)
             break;
         }
     }
+}
+
+ostream& operator<< (ostream& ostr, const StoreManager& u)
+{
+	ostr << "Store Name: \t" << u.storeName << endl;
+	ostr << "Listed Vehicles: " << u.listedVehicles.size() << endl;
+	return ostr;
 }

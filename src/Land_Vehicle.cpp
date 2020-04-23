@@ -16,8 +16,8 @@ Land_Vehicle::~Land_Vehicle()
 }
 void Land_Vehicle::displayVehicleBasics(){ // outputs basic vehicle data
     //TODO add small vehicle asci image
-    cout << B_LBLUE << getModelName() << endl;
-    cout << B_BLUE << getYear() << " - " << getVehicleManuName() << " - " << getMileage() << " km" << endl;
+    cout << getModelName() << endl;
+    cout << getYear() << " - " << getVehicleManuName() << " - " << getMileage() << " km" << endl;
     cout << getPrice() << " €" << endl;
 
 }

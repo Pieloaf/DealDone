@@ -25,7 +25,6 @@ Vehicle::~Vehicle()
 {
     delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
     vehicle_manu = 0;   // sets ptr to 0 to prevent dangling ptr
-    cout << " destruct parent";
 }
 
 void Vehicle::displayVehicleDetails(){ // outputs vehicle infor in a longer format

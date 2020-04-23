@@ -33,6 +33,10 @@ class StoreManager : public User
           void displayListedVehicles();
           void sell(User &u, Vehicle* v);
           void listDetails();
+          int getNumStores(){return numStores;}
+          Vehicle* getListedVehicle(int i){return listedVehicles[i];}
+
+          friend ostream& operator<< (ostream&, const StoreManager&);
 
      protected:
 

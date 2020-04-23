@@ -52,8 +52,8 @@ class Vehicle
 
 
         // User Defined Functions
-        void displayVehicleBasics(); // fully virtual as vehicle objects do not need this function
-        void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
+        virtual void displayVehicleBasics()=0; // fully virtual as vehicle objects do not need this function
+        virtual void displayVehicleDetails(); // virtual as to allow it to be overrided by child classes
 
         Vehicle& operator= (Vehicle& veh1);
 

@@ -27,7 +27,7 @@ class Land_Vehicle : public Vehicle
 
         // User Defined Functions
 
-        // Overwritten Functions
+        // Overridden Functions
         void displayVehicleBasics();
         void displayVehicleDetails();
 

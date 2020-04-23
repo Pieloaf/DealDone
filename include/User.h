@@ -31,7 +31,7 @@ class User
         void buy( Vehicle* v ){ ownedVehicles.push_back(v); }
         void removeVehicle(Vehicle* v);
         int numVehicles(){return ownedVehicles.size();}
-        Vehicle* getVehicle(int i){return ownedVehicles[i];}
+        Vehicle* getOwnedVehicle(int i){return ownedVehicles[i];}
 
         //User Defined Functions
         void myVehicles();
