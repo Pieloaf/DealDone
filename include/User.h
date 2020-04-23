@@ -30,6 +30,7 @@ class User
         // User Defined Accessors and Mutators
         void buyVehicle( Vehicle* v ){ owned_vehicles.push_back(v); } // adds a new owned vehicle to the vector
         void removeOwnedVehicle(Vehicle* v); // removes a vehicle that is the same as inputted object
+        int numVehicles(){return owned_vehicles.size();}        
 
         int numOwnedVehicles(){return owned_vehicles.size();} // special accessor to get the number of owned vehicles
         Vehicle* getOwnedVehicle(int i){ return owned_vehicles[i]; } // special accessor to return a specific vehicle

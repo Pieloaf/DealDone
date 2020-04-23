@@ -12,11 +12,13 @@ StoreManager::StoreManager(std::string usrname, std::string sname):User(usrname)
 //Constructor used when convert User object to Store Manager Object
 StoreManager::StoreManager(User u, std::string sname):User(u.getName()) //initialiser list
 {
-    // setting default values
-    store_name = sname;
-    setOwnedVehicleVec(u.getOwnedVehicleVec()); // copies the owned vehicles to the store
-    num_stores++; //increments static variable
+    // setting values
+    store_name = sname; // sets store_name 
 
+    setOwnedVehicleVec(u.getOwnedVehicleVec()); // copies the users owned vehicles to the store managers owned vehciles
+    u.~User();   
+
+    num_stores++; //increments static variable
 }
 
 StoreManager::~StoreManager()
@@ -30,7 +32,7 @@ void StoreManager::displayListedVehicles()
     for(int i = 0; i < int(listed_vehicles.size()); i++)
     {
         cout << i+1 << ". ";
-        listed_vehicles[i]->displayVehicleBasics();
+        listed_vehicles[i]->displayVehicleDetails();
     }
 }
 
@@ -75,7 +77,15 @@ void StoreManager::sellListedVehicle(User& u, Vehicle* v)
             break;
         }
     }
+
     if(vehicle_checker == 0) { // outputs error message if the vehicle has not been found
             cout << "Error, Vehicle not found." << endl;
     }
+}
+
+ostream& operator<< (ostream& ostr, const StoreManager& u)
+{
+	ostr << "Store Name: \t" << u.store_name << endl;
+	ostr << "Listed Vehicles: " << u.listed_vehicles.size() << endl;
+	return ostr;
 }
