@@ -26,8 +26,33 @@ void Air_Vehicle::displayVehicleDetails(){ // ouputs all the details of the vehi
 }
 
 bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2){ // compares all datamembers between the two vehicles and returns the logic answer
-    return (veh1.getFlightHours() == veh2.getFlightHours() && veh1.getMaxAirSpeed() == veh2.getMaxAirSpeed() && veh1.getModelName() == veh2.getModelName() && veh1.getVehicleManu() == veh2.getVehicleManu() && veh1.getVehicleColour() == veh2.getVehicleColour() && veh1.getPrice() == veh2.getPrice() && veh1.getSeats() == veh2.getSeats() && veh1.getYear() == veh2.getYear() && veh1.getDescription() == veh2.getDescription());
+    return (veh1.getFlightHours() == veh2.getFlightHours()
+             && veh1.getMaxAirSpeed() == veh2.getMaxAirSpeed()
+             && veh1.getModelName() == veh2.getModelName()
+             && veh1.getVehicleManu() == veh2.getVehicleManu()
+             && veh1.getVehicleColour() == veh2.getVehicleColour()
+             && veh1.getPrice() == veh2.getPrice()
+             && veh1.getSeats() == veh2.getSeats()
+             && veh1.getYear() == veh2.getYear()
+             && veh1.getDescription() == veh2.getDescription());
 }
 bool operator!= (Air_Vehicle &veh1, Air_Vehicle &veh2){ // gets the opposite of the == operator
     return !(veh1 == veh2);
+}
+
+Air_Vehicle& Air_Vehicle::operator= (Air_Vehicle &veh1){ // emulates a "true equals" as to allow for object cloning
+    /// Sets the various data members of the selected object to that of the other object
+    // Vehicle data members
+    this->setModelName(veh1.getModelName());
+    this->setDescription(veh1.getDescription());
+    this->setVehicleColour(veh1.getVehicleColour());
+    this->setYear(veh1.getYear());
+    this->setSeats(veh1.getSeats());
+
+    Manufacturer* tempmanu = veh1.getVehicleManu(); // creates a temporary object inorder to dereference the manufacturer pointer
+    this->setVehicleManu(tempmanu);
+
+    //Air Vehicle data members
+    this->setFlightHours(veh1.getFlightHours());
+    this->setMaxAirSpeed(veh1.getMaxAirSpeed());
 }

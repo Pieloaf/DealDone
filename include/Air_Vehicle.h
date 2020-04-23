@@ -19,12 +19,15 @@ class Air_Vehicle : public Vehicle
 
         int getMaxAirSpeed() { return max_air_speed; }
         void setMaxAirSpeed(int val) { max_air_speed = val; }
+
         int getFlightHours() { return flight_hours; }
         void setFlightHours(int val) { flight_hours = val; }
 
         // User Defined Accessors and Mutators
 
         // User Defined Functions
+
+        Air_Vehicle& operator= (Air_Vehicle &veh1);
 
         // Overwritten Functions
         void displayVehicleBasics();
