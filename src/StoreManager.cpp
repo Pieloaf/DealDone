@@ -1,10 +1,9 @@
 #include "StoreManager.h"
 int StoreManager::num_stores=0; //initialising static int for number of stores to 0
 
-StoreManager::StoreManager(std::string usrname, std::string sname):User(usrname) //initialiser list
+StoreManager::StoreManager(std::string usrname, std::string sname):User(usrname),store_name(sname) //initialiser list
 {
     // setting default values
-    store_name = sname;
     num_stores++; //increments static variable
     description = "No Description";
 }
@@ -13,10 +12,10 @@ StoreManager::StoreManager(std::string usrname, std::string sname):User(usrname)
 StoreManager::StoreManager(User u, std::string sname):User(u.getName()) //initialiser list
 {
     // setting values
-    store_name = sname; // sets store_name 
+    store_name = sname; // sets store_name
 
     setOwnedVehicleVec(u.getOwnedVehicleVec()); // copies the users owned vehicles to the store managers owned vehciles
-    u.~User();   
+    u.~User();
 
     num_stores++; //increments static variable
 }
