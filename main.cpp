@@ -48,28 +48,4 @@ int main()
     cout << NOCOL << "\nNote: s2 was constructed from the previously constructed user, u2, using an " << B_BLUE << "overloaded constructor" << B_NOCOL << " to \"convert\" a User object to Store Manager" << endl;
     cout << NOCOL << "Note: the Store Manager information is displayed using an " << B_BLUE << "overridden function" << B_NOCOL << " derivied from the overloaded operator<< in the parent User Class" << endl;
     
-
-
-    cout << "\n======================================================================="<<endl;
-
-    Land_Vehicle v1;
-
-    v1.getVehicleManu()->setName("Toyota");
-    v1.setModelName("Yaris");
-
-    Air_Vehicle v2;
-
-    v2.getVehicleManu()->setName("Boewing");
-    v2.setModelName("747");
-
-    s1.addListedVehicle(&v1);
-    s1.addListedVehicle(&v2);
-    cout << "\n===========\nv1 Details:\n";
-    s1.getListedVehicle(0)->displayVehicleDetails();
-    cout << "\n===========\nv2 Details:\n";
-    s1.getListedVehicle(1)->displayVehicleDetails();
-
-    cout << "\n\nNote: The displayVehicleDetails function for both Land and Air Vehicles are both " << B_BLUE << "overloaded" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl; 
-
-
 }

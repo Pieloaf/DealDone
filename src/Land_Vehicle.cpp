@@ -14,12 +14,14 @@ Land_Vehicle::~Land_Vehicle()
 {
     //dtor
 }
-void Land_Vehicle::displayVehicleBasics(){ // outputs basic vehicle data
-    cout << getModelName() << endl;
-    cout << LBLUE << getYear() << " - " << getVehicleManuName() << " - " << getMileage() << " km" << endl;
-    cout << LGREN <<getPrice() << " €" << NOCOL<< endl;
 
+void Land_Vehicle::displayVehicleBasics(){
+    cout << getModelName()<< endl;
+    cout << LBLUE << getYear() << " - " << getVehicleManuName() << " - " <<  getMileage()<< " km" << endl;
+    cout << LGREN << getPrice() << " €" << NOCOL<< endl;
+    
 }
+
 void Land_Vehicle::displayVehicleDetails(){ // overwritten function that outputs vehicle data
     cout << LGREN << "***" << endl; // changes colour ***see colours.h***
     Vehicle::displayVehicleDetails(); // calls parent version for more details

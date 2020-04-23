@@ -38,7 +38,6 @@ class Land_Vehicle : public Vehicle
         friend bool operator!= (Land_Vehicle &veh1, Land_Vehicle &veh2);
 
 
-
     protected:
 
     private:
