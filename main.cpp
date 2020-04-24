@@ -194,5 +194,98 @@ int main()
 
     cout << "Press Enter to Continue..." << endl;
     cin.ignore();
+
+/// Part 3
+    cout <<BOLD << RED << "NOTE: Some functions may not be shown in this section as they have previously been tested or were simply missed when coding." << GO_AWAY << endl;
+    ///Manufacturer test
+    cout << "======================================================================="<<endl;
+    cout << BOLD << "Manufacturer test" << GO_AWAY << endl;
+    // testing manufacturer functions
+    Manufacturer* t_m1 = new Manufacturer();
+    Manufacturer* t_m2 = new Manufacturer();
+
+    // testing functions
+    t_m1->setName("Boeing");
+    t_m1->setProductType("Commerical Aircraft");
+    t_m1->addColour("Red");
+    t_m1->addColour("Blue");
+    t_m1->addColour("Yellow");
+    t_m1->removeColour("Yellow");
+    cout << "Colours:" << endl;
+    t_m1->listColours(); // only red and blue should print
+    vector <string> v = t_m1->getColour_List();
+    v.pop_back();
+    t_m1->setColour_List(v);
+    t_m1->manuDetails(); // only Red should print
+
+    // testing operators
+    t_m2 = t_m1;
+    // outputs if operators and getters work
+    if(t_m1 == t_m2 && !(t_m1 != t_m2)) cout << "if visible then getters, !=, == and = operators work" << endl;
+
+
+    ///Vehicle and Child class testing
+    cout << "======================================================================="<<endl;
+    cout << BOLD << "Vehicle test" << GO_AWAY << endl;
+    Air_Vehicle t_av1(t_m1);
+    Air_Vehicle t_av2(t_m1);
+
+    // testing Vehicle and Air_Vehicle setters
+    t_av1.setModelName("747-500");
+    t_av1.setSeats(500);
+    t_av1.setVehicleColour("Blue");
+    t_av1.setYear(1995);
+    t_av1.setPrice(10000000);
+    t_av1.setDescription("This is a Boeing 747.");
+    t_av1.setMaxAirSpeed(1075);
+    t_av1.setFlightHours(10000);
+
+    t_av1.displayVehicleBasics(); // test basics
+
+    t_av1 = t_av2; // = operator
+
+    // outputs if getters and operators works
+    if(t_av1 == t_av2 && !(t_av2 != t_av1)) cout <<"Ouputs if ==, !=, getters and = work\n" <<endl;
+
+    t_av2.displayVehicleDetails(); // test details
+
+    Land_Vehicle t_lv1;
+    // test land vehicle settings
+    t_lv1.setTransmission("Manual");
+    t_lv1.setMilage(90000);
+    t_lv1.setDoors(4);
+
+    t_lv1.displayVehicleDetails(); // see if setters work
+
+        ///User and Store Manager class testing
+    cout << "======================================================================="<<endl;
+    cout << BOLD << "User test" << GO_AWAY << endl;
+
+    User t_us("John");
+
+    StoreManager t_sm("Jake","test");
+    t_sm.setStoreName("Jake's Store");
+    t_sm.setDescription("This is a store");
+
+    t_sm.addListedVehicle(&t_av1); // adding vehicles
+    t_sm.addListedVehicle(&t_lv1);
+    cout << "Listed Vehicle test:" << endl;
+
+    t_sm.displayListedVehicles(); // see if vehicles were added
+
+    if (t_lv1 == *t_sm.getListedVehicle(1)) cout << "if you can see this then get listed vehicle works" << endl;
+
+    cout << "Testing sell funciton. John should have 1 owned vehicle and Jake should have 1 listed vehicle" << endl;
+    t_sm.sellListedVehicle(t_us,t_sm.getListedVehicle(1)); // should remove listed vehicle and add it to the user
+    t_sm.listDetails();
+    t_us.listDetails();
+
+    cout << "\n======================================================================="<<endl;
+    cout << "Enter one of the following to navigate the programme" << endl;
+    cout << "0 - Return to Main Menu" << endl;
+    cout << "2 - View Code Requirements for Part 2" << endl;
+    cout << "3 - Exit" << endl << "Input:";
+    cin >> controller;   
+
     return 0;
 }
