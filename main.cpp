@@ -13,7 +13,7 @@
 using namespace std;
 
 int main()
-{    
+{
     system("clear");
     /// Splash Screen
     cout << LRED <<"              i X z X Y m X X n          " << endl;
@@ -39,7 +39,7 @@ int main()
     //Creating User Objects
     User u1;        //default constructor
     User u2("John");//overloaded constructor
-    
+
     cout <<"User object, u1, contructed with no username passed to the constructor:\n" << CYAN << u1 << endl;
     cout << NOCOL << "User object, u2, constructed using an "<< B_BLUE <<"overloaded constructor"<< B_NOCOL <<" , with a username passed through as string:\n"<< CYAN << u2 <<endl;
     cout << NOCOL << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " With the username being a " << B_BLUE << "constant"<< B_NOCOL << " string , it was set through the use of an "<<B_BLUE<< "initialisation list" << B_NOCOL << endl;
@@ -90,16 +90,16 @@ int main()
     cout << endl << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " Using the default constructor the Vehicle object only has default values until set" << endl;
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  Vehicle object mutators were used to set manufacturer, model name, price, year and mileage as seen below:\n" << endl;
 
-    v1.getVehicleManu()->setName("Toyota"); //setting vehicle manufacturer name Note: -> needs to be used in place of . because getVehicleManu() returns a Manufacturer pointer 
+    v1.getVehicleManu()->setName("Toyota"); //setting vehicle manufacturer name Note: -> needs to be used in place of . because getVehicleManu() returns a Manufacturer pointer
     v1.setModelName("Yaris");
-    v1.setMilage(20000); 
-    v1.setYear(2015); 
+    v1.setMilage(20000);
+    v1.setYear(2015);
     v1.setPrice(10000);
 
-    
+
     v1.displayVehicleBasics(); //short display function
 
-    cout << endl; 
+    cout << endl;
     Manufacturer* m1 = new Manufacturer("Boeing"); //dynamically creating a Manufacturer object. Deleted in the Vehicle Destuctor on going out of scope
     Air_Vehicle v2(m1); //overloaded constructor, passing in manufacturer pointer
 
@@ -130,7 +130,7 @@ int main()
     s1.getListedVehicle(1)->displayVehicleDetails(); //calling the long display function for the second Vehicle object in listedVehicles vector for s1
 
 
-    cout << B_WITE << BLK << "\n\nNote:" << B_NOCOL << NOCOL << " Both the displayVehicleBasics and displayVehicleDetails function for both Land and Air Vehicle objects are both " << B_BLUE << "overridden" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl; 
+    cout << B_WITE << BLK << "\n\nNote:" << B_NOCOL << NOCOL << " Both the displayVehicleBasics and displayVehicleDetails function for both Land and Air Vehicle objects are both " << B_BLUE << "overridden" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl;
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  Both function overriding and overloading are types of " << B_BLUE << "polymorophic functions" << B_NOCOL << endl;
 
     cout << "Press Enter to Continue..." << endl;
@@ -195,7 +195,7 @@ int main()
     cout << "Press Enter to Continue..." << endl;
     cin.ignore();
 
-/// Part 3
+/// Function Test
     cout <<BOLD << RED << "NOTE: Some functions may not be shown in this section as they have previously been tested or were simply missed when coding." << GO_AWAY << endl;
     ///Manufacturer test
     cout << "======================================================================="<<endl;
@@ -285,7 +285,7 @@ int main()
     cout << "0 - Return to Main Menu" << endl;
     cout << "2 - View Code Requirements for Part 2" << endl;
     cout << "3 - Exit" << endl << "Input:";
-    cin >> controller;   
+    cin >> controller;
 
     return 0;
 }
