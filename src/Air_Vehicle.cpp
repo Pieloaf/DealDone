@@ -24,7 +24,7 @@ void Air_Vehicle::displayVehicleBasics(){ // Outputs basic data onto the console
 }
 
 void Air_Vehicle::displayVehicleDetails(){ // ouputs all the details of the vehicle
-    cout << "***" << endl << BLUE; // sets colour *** see colour.h for more info***
+    cout << "***" << endl << LBLUE; // sets colour *** see colour.h for more info***
     Vehicle::displayVehicleDetails(); // calls parent function for more details
     // air vehicle details
     cout << "Air Speed: " << max_air_speed << "km/hr" << endl;
