@@ -215,7 +215,7 @@ int main()
     cout << "Colours:" << endl;
     t_m1->listColours(); // only red and blue should print
     vector <string> v = t_m1->getColour_List();
-    //v.pop_back();
+    v.pop_back();
     t_m1->setColour_List(v);
     t_m1->manuDetails(); // only Red should print
 
