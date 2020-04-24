@@ -2,7 +2,7 @@
 
 Air_Vehicle::Air_Vehicle():Vehicle() // initializer list
 {
-    cout << "Constructing a Air_Vehicle Object..." << endl;
+    cout << "Constructing an Air_Vehicle Object..." << endl;
     max_air_speed = 0; // sets default values
     flight_hours = 0;
 }
