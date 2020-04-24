@@ -30,8 +30,8 @@ void StoreManager::displayListedVehicles()
     // iterates through vector of vechicle objects in listed_vehicles vector and prints out the index+1 and the model_name
     for(int i = 0; i < int(listed_vehicles.size()); i++)
     {
-        cout << i+1 << ". ";
-        listed_vehicles[i]->displayVehicleDetails();
+        cout << "\n" << i+1 << ".\n";
+        listed_vehicles[i]->displayVehicleBasics();
     }
 }
 

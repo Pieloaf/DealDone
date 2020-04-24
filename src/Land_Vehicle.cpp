@@ -2,13 +2,14 @@
 
 Land_Vehicle::Land_Vehicle(): Vehicle() // iniatlizer list
 {
+    cout << "Constructing a Land_Vehicle Object..." << endl;
     doors = 4; // sets default values
     transmission = "Undefined";
     mileage = 0;
 }
 Land_Vehicle::Land_Vehicle(Manufacturer* m1): Vehicle(m1) // initializer list
 {
-    Land_Vehicle(); // calls default constructor for default values
+        Land_Vehicle(); // calls default constructor for default values
 }
 Land_Vehicle::~Land_Vehicle()
 {
@@ -16,19 +17,21 @@ Land_Vehicle::~Land_Vehicle()
 }
 
 void Land_Vehicle::displayVehicleBasics(){
+    cout << "---------"<< endl;
     cout << getModelName()<< endl;
-    cout << LBLUE << getYear() << " - " << getVehicleManuName() << " - " <<  getMileage()<< " km" << endl;
-    cout << LGREN << getPrice() << " €" << NOCOL<< endl;
+    cout << BLUE << getYear() << " - " << getVehicleManuName() << " - " <<  getMileage()<< " km" << endl;
+    cout << GREN << getPrice() << " €" << NOCOL<< endl;
+    cout << "---------"<< endl;
     
 }
 
 void Land_Vehicle::displayVehicleDetails(){ // overwritten function that outputs vehicle data
-    cout << LGREN << "***" << endl; // changes colour ***see colours.h***
+    cout << "***" << endl << RED; // changes colour ***see colours.h***
     Vehicle::displayVehicleDetails(); // calls parent version for more details
     // land vehicle details
     cout << "Num of Door: " << doors << endl;
-    cout << "Transmission Type: " << transmission << endl;
-    cout << "***" << NOCOL << endl;
+    cout << "Transmission Type: " << transmission << NOCOL << endl;
+    cout << "***" << endl;
 }
 bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2){ // all data members to see if they are equal and returns the outcome
     return (veh1.getDoors() == veh2.getDoors()
