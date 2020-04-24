@@ -12,6 +12,13 @@
 
 using namespace std;
 
+void step()
+{
+    cout << "Press Enter to Continue..." << endl;
+    cin.ignore();
+    system("clear");
+}
+
 int main()
 {    
     system("clear");
@@ -27,10 +34,8 @@ int main()
 
     cout<< FST_BLINK << LBLUE <<"\n===== Welcome to DealDone Vehicle Sales =====\n" << GO_AWAY << endl << endl;
 
-    cout << "Press Enter to Continue..." << endl;
-    cin.ignore();
+    step();
 
-    system("clear"); // clear screen linux
     //system("cls"); // clear screen windows
     cout << "======================================================================="<<endl;
     cout << BOLD << "\nPart 1a -  Overloaded Constructor, Constructor Initialisation list and Constants" << GO_AWAY << endl << endl;
@@ -45,10 +50,7 @@ int main()
     cout << NOCOL << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " With the username being a " << B_BLUE << "constant"<< B_NOCOL << " string , it was set through the use of an "<<B_BLUE<< "initialisation list" << B_NOCOL << endl;
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  cout of user object was done using an " << B_BLUE << "overloaded << operator" << B_NOCOL << endl;
 
-    cout << "Press Enter to Continue..." << endl;
-    cin.ignore();
-
-    system("clear");
+    step();
     cout << "\n======================================================================="<<endl;
     cout << BOLD << "\nPart 1b - Static Variables" << GO_AWAY << endl << endl;
 
@@ -68,10 +70,8 @@ int main()
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " When a Vehicle is " << B_BLUE << "goes out of scope or is destructed" << B_NOCOL << " numStores is decremented" << endl;
 
 
-    cout << "Press Enter to Continue..." << endl;
-    cin.ignore();
+    step();
 
-    system("clear");
     cout << "\n======================================================================="<<endl;
 
     cout << BOLD << "\nPart 1c & 2a - Function Overriding, Virtual and Polymorphic Functions and Destructors" << GO_AWAY << endl << endl;
@@ -133,10 +133,8 @@ int main()
     cout << B_WITE << BLK << "\n\nNote:" << B_NOCOL << NOCOL << " Both the displayVehicleBasics and displayVehicleDetails function for both Land and Air Vehicle objects are both " << B_BLUE << "overridden" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl; 
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  Both function overriding and overloading are types of " << B_BLUE << "polymorophic functions" << B_NOCOL << endl;
 
-    cout << "Press Enter to Continue..." << endl;
-    cin.ignore();
-
-    system("clear");
+    step();
+    
     cout << "\n======================================================================="<<endl;
 
     cout << BOLD << "\nPart 2b - Overloaded Assignment Operator" << GO_AWAY << endl << endl;
@@ -192,11 +190,13 @@ int main()
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  The "<< B_BLUE << "assignment operation" << B_NOCOL <<" used for the Air_Vehicle also calls the ";
     cout << B_BLUE << "assignment operator" << B_NOCOL << " for the Manufacturer as the mutator uses it." << endl;
 
-    cout << "Press Enter to Continue..." << endl;
-    cin.ignore();
-
-/// Part 3
+    step();
+    /*///Part 3
+    cout << BOLD << "Miscellaneous Function Testing" << GO_AWAY << endl;
     cout <<BOLD << RED << "NOTE: Some functions may not be shown in this section as they have previously been tested or were simply missed when coding." << GO_AWAY << endl;
+    
+    step();
+    
     ///Manufacturer test
     cout << "======================================================================="<<endl;
     cout << BOLD << "Manufacturer test" << GO_AWAY << endl;
@@ -223,7 +223,8 @@ int main()
     // outputs if operators and getters work
     if(t_m1 == t_m2 && !(t_m1 != t_m2)) cout << "if visible then getters, !=, == and = operators work" << endl;
 
-
+    step();
+    
     ///Vehicle and Child class testing
     cout << "======================================================================="<<endl;
     cout << BOLD << "Vehicle test" << GO_AWAY << endl;
@@ -257,7 +258,9 @@ int main()
 
     t_lv1.displayVehicleDetails(); // see if setters work
 
-        ///User and Store Manager class testing
+    step();
+        
+    ///User and Store Manager class testing
     cout << "======================================================================="<<endl;
     cout << BOLD << "User test" << GO_AWAY << endl;
 
@@ -280,12 +283,8 @@ int main()
     t_sm.listDetails();
     t_us.listDetails();
 
-    cout << "\n======================================================================="<<endl;
-    cout << "Enter one of the following to navigate the programme" << endl;
-    cout << "0 - Return to Main Menu" << endl;
-    cout << "2 - View Code Requirements for Part 2" << endl;
-    cout << "3 - Exit" << endl << "Input:";
-    cin >> controller;   
+    step();*/
 
     return 0;
+
 }

@@ -58,7 +58,10 @@ void Manufacturer::operator= (Manufacturer& m1){ // acts as a "true equals" for 
 
 bool operator== (Manufacturer m1, Manufacturer m2){
 
-    if(m1.getColour_List().size() == m2.getColour_List().size()){ // initially checks if the two vectors are the same size as if they aren't the manufacturers arent the same.
+    vector <string> x = m1.getColour_List();
+    vector <string> y = m2.getColour_List();
+
+    if(x.size() == y.size()){ // initially checks if the two vectors are the same size as if they aren't the manufacturers arent the same.
         if (m1.getColour_List() == m2.getColour_List()){ // then checks if the two vectors are the same
             return(m1.getName() == m2.getName() && m1.getProductType() == m2.getProductType()); // returns the "and" operation of the other data members
         }

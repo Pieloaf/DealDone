@@ -25,7 +25,7 @@ Vehicle::Vehicle(Manufacturer* m): vehicle_manu(m) // Ensure that the passed in 
 
 Vehicle::~Vehicle()
 {
-    delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
+    //delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
     vehicle_manu = 0;   // sets ptr to 0 to prevent dangling ptr
 }
 

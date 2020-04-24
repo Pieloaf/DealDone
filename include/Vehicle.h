@@ -47,7 +47,7 @@ class Vehicle
 
         // User Defined Accessor and Mutators
         Manufacturer* getVehicleManu() { return vehicle_manu; };
-        void setVehicleManu(Manufacturer* m){ vehicle_manu = m; } // Sets the manufacturer using a pointer. !!!Ensure the object is dynamically allocated!!!
+        void setVehicleManu(Manufacturer* m){ *vehicle_manu = *m; } // Sets the manufacturer using a pointer. !!!Ensure the object is dynamically allocated!!! Passing the value at one pointer to the other
         string getVehicleManuName() { return vehicle_manu->getName(); } // this is a special accessor to get the name of the manufacturer
 
 
