@@ -5,7 +5,7 @@ Air_Vehicle::Air_Vehicle():Vehicle() // initializer list
     max_air_speed = 0; // sets default values
     flight_hours = 0;
 }
-Air_Vehicle::Air_Vehicle(Manufacturer m):Vehicle(m) // initlizer list
+Air_Vehicle::Air_Vehicle(Manufacturer* m):Vehicle(m) // initlizer list
 {
     Air_Vehicle(); // calls default constructor for default values
 }
@@ -16,7 +16,7 @@ Air_Vehicle::~Air_Vehicle()
 void Air_Vehicle::displayVehicleBasics(){ // Outputs basic data onto the console
     //TODO add small vehicle asci image
     cout << getModelName() << endl;
-    cout << getYear() << " - " << getVehicleManuName() << " - " << flight_hours << " Hrs" << endl;
+    //cout << getYear() << " - " << getVehicleManuName() << " - " << flight_hours << " Hrs" << endl;
     cout << getPrice() << " €" << endl;
 }
 void Air_Vehicle::displayVehicleDetails(){ // ouputs all the details of the vehicle

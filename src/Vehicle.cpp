@@ -3,7 +3,7 @@
 Vehicle::Vehicle()
 {
     // setting default values
-    model_name = "Unamed Land Vehicle";
+    model_name = "Unamed Vehicle";
     description = "No Description";
     year = 1982;
     vehicle_colour = "No Colour";
@@ -12,10 +12,10 @@ Vehicle::Vehicle()
     vehicle_manu = new Manufacturer; //dynamically creates new object of Manufacturer Class
 }
 
-Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m) // Ensure that the passed in manufacturer is a dynamically creates object
+Vehicle::Vehicle(Manufacturer* m): vehicle_manu(m) // Ensure that the passed in manufacturer is a dynamically creates object
 {
     // setting default values
-    model_name = "Unamed Land Vehicle";
+    model_name = "Unamed Vehicle";
     description = "No Description";
     year = 1982;
     vehicle_colour = "No Colour";
@@ -35,7 +35,7 @@ void Vehicle::displayVehicleDetails(){ // outputs vehicle info in a longer forma
     cout << "Manufacturer: " << vehicle_manu->getName() << endl;
     cout << "Colour: " << vehicle_colour << endl;
     cout << "Price: " << price << endl;
-    cout << "Seat count: " << seats << endl;
+    cout << "Seat count: " << seats << endl; 
     cout << "Description:" << description << endl;
 }
 
