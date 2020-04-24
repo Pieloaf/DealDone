@@ -14,6 +14,7 @@ using std::string;
 using std::vector;
 using std::cout;
 using std::endl;
+using std::ostream;
 
 class Vehicle
 {
@@ -41,7 +42,7 @@ class Vehicle
         string getDescription() { return description; }
         void setDescription(string val) { description = val; }
 
-        string getModelName() { return model_name; }
+        string getModelName() const { return model_name; }
         void setModelName(string val) { model_name = val; }
 
         // User Defined Accessor and Mutators

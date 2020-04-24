@@ -2,6 +2,7 @@
 
 Air_Vehicle::Air_Vehicle():Vehicle() // initializer list
 {
+    cout << "Constructing a Air_Vehicle Object..." << endl;
     max_air_speed = 0; // sets default values
     flight_hours = 0;
 }
@@ -15,17 +16,20 @@ Air_Vehicle::~Air_Vehicle()
 }
 void Air_Vehicle::displayVehicleBasics(){ // Outputs basic data onto the console
     //TODO add small vehicle asci image
+    cout << "---------"<< endl;
     cout << getModelName() << endl;
-    cout << getYear() << " - " << getVehicleManuName() << " - " << flight_hours << " Hrs" << endl;
-    cout << getPrice() << " €" << endl;
+    cout << BLUE << getYear() << " - " << getVehicleManuName() << " - " << flight_hours << " Hrs" << endl;
+    cout << GREN << getPrice() << " €" << NOCOL << endl;
+    cout << "---------"<< endl;
 }
+
 void Air_Vehicle::displayVehicleDetails(){ // ouputs all the details of the vehicle
-    cout << LBLUE << "***" << endl; // sets colour *** see colour.h for more info***
+    cout << "***" << endl << BLUE; // sets colour *** see colour.h for more info***
     Vehicle::displayVehicleDetails(); // calls parent function for more details
     // air vehicle details
-    cout << "Air Speed: " << max_air_speed << endl;
-    cout << "Flight Hours: " << flight_hours << endl;
-    cout << "***" << NOCOL << endl; // removes colour
+    cout << "Air Speed: " << max_air_speed << "km/hr" << endl;
+    cout << "Flight Hours: " << flight_hours << NOCOL << endl;
+    cout << "***" << endl; // removes colour
 }
 
 bool operator== (Air_Vehicle &veh1, Air_Vehicle &veh2){ // compares all datamembers between the two vehicles and returns the logic answer
