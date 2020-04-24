@@ -21,7 +21,7 @@ void step()
 
 int main()
 {
-    int controller = 0;
+
     system("clear");
     /// Splash Screen
     cout << LRED <<"              i X z X Y m X X n          " << endl;
@@ -72,7 +72,7 @@ int main()
     cout << CYAN << s2 << NOCOL; //overloaded constructor
     cout << "\nCreating a second Store Manager object, s2, the static variable numStores is incremented again\n" << PURP << "Number of Stores: "  << s2.getNumStores() << endl;
 
-    cout << B_WITE << BLK << "\nNote:" << B_NOCOL << NOCOL << " s2 was constructed from the previously constructed user, u2, using an " << B_BLUE << "overloaded constructor" << B_NOCOL << " to \"convert\" a User object to Store Manager" << endl;
+    cout << endl << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " s2 was constructed from the previously constructed user, u2, using an " << B_BLUE << "overloaded constructor" << B_NOCOL << " to \"convert\" a User object to Store Manager" << endl;
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " When a Vehicle is " << B_BLUE << "goes out of scope or is destructed" << B_NOCOL << " numStores is decremented" << endl;
 
 
@@ -119,7 +119,7 @@ int main()
 
 
     v2.displayVehicleBasics(); //short display function
-    cout << B_WITE << BLK << "\nNote:" << B_NOCOL << NOCOL << " The second Vehicle object was constructed with " << B_BLUE << "overloaded constructer" << B_NOCOL << " by passing in the manufacturer pointer" << endl;
+    cout << endl << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << " The second Vehicle object was constructed with " << B_BLUE << "overloaded constructer" << B_NOCOL << " by passing in the manufacturer pointer" << endl;
 
     v2.setModelName("747"); //setting model name
     v2.setPrice(30000000);
@@ -141,7 +141,7 @@ int main()
     s1.getListedVehicle(1)->displayVehicleDetails(); //calling the long display function for the second Vehicle object in listedVehicles vector for s1
 
 
-    cout << B_WITE << BLK << "\n\nNote:" << B_NOCOL << NOCOL << " Both the displayVehicleBasics and displayVehicleDetails function for both Land and Air Vehicle objects are both " << B_BLUE << "overridden" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl;
+    cout << B_WITE << BLK << "\nNote:" << B_NOCOL << NOCOL << " Both the displayVehicleBasics and displayVehicleDetails function for both Land and Air Vehicle objects are both " << B_BLUE << "overridden" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl;
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  Both function overriding and overloading are types of " << B_BLUE << "polymorophic functions" << B_NOCOL << endl;
 
     step();
