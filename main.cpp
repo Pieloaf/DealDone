@@ -46,6 +46,47 @@ int main()
     cout << "\nCreating a second Store Manager object, s2, the static variable numStores is incremented again\n" << PURP << "Number of Stores: "  << s2.getNumStores() << endl;
 
     cout << NOCOL << "\nNote: s2 was constructed from the previously constructed user, u2, using an " << B_BLUE << "overloaded constructor" << B_NOCOL << " to \"convert\" a User object to Store Manager" << endl;
-    cout << NOCOL << "Note: the Store Manager information is displayed using an " << B_BLUE << "overridden function" << B_NOCOL << " derivied from the overloaded operator<< in the parent User Class" << endl;
     
+    ///// Part 2
+
+    cout << "\n======================================================================="<<endl;
+
+    cout << "Constructing a Land_Vehicle Object..." << endl; 
+    Land_Vehicle v1;
+
+    cout << "Default constructor used to create vehicle object, v1" << endl;
+    v1.displayVehicleBasics();
+
+    cout << "Vehicle is unnamed and has defualt manufacturer until set" << endl;
+
+    v1.getVehicleManu()->setName("Toyota");
+    v1.setModelName("Yaris");
+
+    v1.displayVehicleBasics();
+    cout << "Mutator used to set manufacturer and model names" << endl;
+
+    cout << "Constructing an Air_Vehicle Object and Manufacturer Object..." << endl; 
+    Manufacturer* m1 = new Manufacturer("test");
+    Land_Vehicle v2(m1);
+    cout << v2.getYear();
+
+    v2.displayVehicleBasics();
+    cout << "Vehicle was constructed with " << B_BLUE << "overloaded constructer" << B_NOCOL << " by passing in the manufacturer object" << endl;
+
+    v2.setModelName("747");
+    cout << "Only the model name had to be set" << endl;
+
+    cout << "\nBoth Vehicle object, v1 and v2 were added to the listed vehicles object of the Store Manager object s1" << endl;
+    s1.addListedVehicle(&v1);
+    s1.addListedVehicle(&v2);
+    s1.displayListedVehicles();
+    cout << "Now displaying full vehicle details";
+    cout << "\n===========\nv1 Details:\n";
+    s1.getListedVehicle(0)->displayVehicleDetails();
+    cout << "\n===========\nv2 Details:\n";
+    s1.getListedVehicle(1)->displayVehicleDetails();
+
+    cout << "\n\nNote: The displayVehicleDetails function for both Land and Air Vehicles are both " << B_BLUE << "overridden" << B_NOCOL << " from the parent Vehicle Class so as too avoid repeated code between the two classes"<<endl; 
+    cout << "Note: Both function overriding and overloading are types of " << B_BLUE << "polymorophic functions" << B_NOCOL << endl;
+
 }
