@@ -27,9 +27,6 @@ Vehicle::~Vehicle()
 {
     delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
     vehicle_manu = 0;   // sets ptr to 0 to prevent dangling ptr
-    cout << "\nEach vehicle object " << B_BLUE << "is destroyed" << B_NOCOL << " after the main is exited. The " << B_BLUE << "destructor" << B_NOCOL << " calls the " << B_BLUE << "delete" << B_NOCOL << " key word on the " << B_BLUE << "vehicle_manu pointer to free the memory" << B_NOCOL << ", to prevent a memory leak" << endl;
-    cout << "The vehicle_manu pointer is then set to 0 to " << B_BLUE << "avoid any dangling pointers" << B_NOCOL << endl;
-    cout << "These steps need to be taken in the destructor as the default Vehicle constructor uses the new key word to dynamically create a Manufacturer object" << endl;
 }
 
 void Vehicle::displayVehicleDetails(){ // outputs vehicle info in a longer format into the terminal

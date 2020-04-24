@@ -6,7 +6,7 @@ Air_Vehicle::Air_Vehicle():Vehicle() // initializer list
     max_air_speed = 0; // sets default values
     flight_hours = 0;
 }
-Air_Vehicle::Air_Vehicle(Manufacturer* m):Vehicle(m) // initlizer list
+Air_Vehicle::Air_Vehicle(Manufacturer* m):Vehicle(m) // initializer list
 {
     Air_Vehicle(); // calls default constructor for default values
 }
