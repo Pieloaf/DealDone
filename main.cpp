@@ -14,6 +14,7 @@ using namespace std;
 
 int main()
 {
+    int controller = 0;
     system("clear");
     /// Splash Screen
     cout << LRED <<"              i X z X Y m X X n          " << endl;
@@ -214,7 +215,7 @@ int main()
     cout << "Colours:" << endl;
     t_m1->listColours(); // only red and blue should print
     vector <string> v = t_m1->getColour_List();
-    v.pop_back();
+    //v.pop_back();
     t_m1->setColour_List(v);
     t_m1->manuDetails(); // only Red should print
 
@@ -279,13 +280,6 @@ int main()
     t_sm.sellListedVehicle(t_us,t_sm.getListedVehicle(1)); // should remove listed vehicle and add it to the user
     t_sm.listDetails();
     t_us.listDetails();
-
-    cout << "\n======================================================================="<<endl;
-    cout << "Enter one of the following to navigate the programme" << endl;
-    cout << "0 - Return to Main Menu" << endl;
-    cout << "2 - View Code Requirements for Part 2" << endl;
-    cout << "3 - Exit" << endl << "Input:";
-    cin >> controller;
 
     return 0;
 }
