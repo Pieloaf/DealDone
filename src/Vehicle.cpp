@@ -3,7 +3,7 @@
 Vehicle::Vehicle()
 {
     // setting default values
-    model_name = "Unamed Land Vehicle";
+    model_name = "Unamed Vehicle";
     description = "No Description";
     year = 1982;
     vehicle_colour = "No Colour";
@@ -12,7 +12,7 @@ Vehicle::Vehicle()
     vehicle_manu = new Manufacturer; //dynamically creates new object of Manufacturer Class
 }
 
-Vehicle::Vehicle(Manufacturer m): vehicle_manu(&m) // Ensure that the passed in manufacturer is a dynamically creates object
+Vehicle::Vehicle(Manufacturer* m): vehicle_manu(m) // Ensure that the passed in manufacturer is a dynamically creates object
 {
     // setting default values
     model_name = "Unamed Land Vehicle";

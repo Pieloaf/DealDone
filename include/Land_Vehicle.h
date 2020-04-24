@@ -12,7 +12,7 @@ class Land_Vehicle : public Vehicle
         virtual ~Land_Vehicle();
 
         // user defined constructors
-        Land_Vehicle(Manufacturer m);
+        Land_Vehicle(Manufacturer* m);
 
         /// Function Declarations
         // Generated Accessors and Mutators

@@ -6,7 +6,7 @@ Land_Vehicle::Land_Vehicle(): Vehicle() // iniatlizer list
     transmission = "Undefined";
     mileage = 0;
 }
-Land_Vehicle::Land_Vehicle(Manufacturer m1): Vehicle(m1) // initializer list
+Land_Vehicle::Land_Vehicle(Manufacturer* m1): Vehicle(m1) // initializer list
 {
     Land_Vehicle(); // calls default constructor for default values
 }

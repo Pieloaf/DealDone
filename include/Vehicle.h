@@ -22,7 +22,7 @@ class Vehicle
         Vehicle();
         virtual ~Vehicle();
         //user defined constructors
-        Vehicle(Manufacturer m);
+        Vehicle(Manufacturer* m);
 
         /// Function Declarations
         // Generated Accessors and Mutators
