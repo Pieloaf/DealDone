@@ -41,7 +41,7 @@ int main()
 
 
 
-    ///
+    /// Part 1
     //system("cls"); // clear screen windows
     cout << "======================================================================="<<endl;
     cout << BOLD << "\nPart 1a -  Overloaded Constructor, Constructor Initialisation list and Constants" << GO_AWAY << endl << endl;
@@ -82,7 +82,7 @@ int main()
 
 
 
-
+    /// Part 2
     cout << "\n======================================================================="<<endl;
 
     cout << BOLD << "\nPart 1c & 2a - Function Overriding, Virtual and Polymorphic Functions and Destructors" << GO_AWAY << endl << endl;
@@ -111,7 +111,7 @@ int main()
     v1.displayVehicleBasics(); //short display function
 
     cout << endl;
-    Manufacturer* m1 = new Manufacturer("Boeing"); //dynamically creating a Manufacturer object. Deleted in the Vehicle Destuctor on going out of scope
+    Manufacturer m1("Boeing"); //dynamically creating a Manufacturer object. Deleted in the Vehicle Destuctor on going out of scope
     Air_Vehicle v2(m1); //overloaded constructor, passing in manufacturer pointer
 
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  Again the display function used below is "<< B_BLUE << "overridden"<< B_NOCOL <<" from its parent Vehicle class where it is a "<< B_BLUE << "fully virtual function\n"<< B_NOCOL << endl;
@@ -145,7 +145,7 @@ int main()
     cout << B_WITE << BLK << "Note:" << B_NOCOL << NOCOL << "  Both function overriding and overloading are types of " << B_BLUE << "polymorophic functions" << B_NOCOL << endl;
 
     step();
-    
+
     cout << "\n======================================================================="<<endl;
 
     cout << BOLD << "\nPart 2b - Overloaded Assignment Operator" << GO_AWAY << endl << endl;
@@ -153,8 +153,8 @@ int main()
     cout << "Creating two differement Air_Vehicles..." << endl;
 
     // creating two  manufacturers
-    Manufacturer* assignment_m1 = new Manufacturer("Boeing","Commerical Aircraft");
-    Manufacturer* assignment_m2 = new Manufacturer("Airbus","Commercial Aircraft");
+    Manufacturer assignment_m1("Boeing","Commerical Aircraft");
+    Manufacturer assignment_m2("Airbus","Commercial Aircraft");
     // creating vehicle 1
     Air_Vehicle assignment_v1(assignment_m1);
     // setters to ensure they are different
@@ -213,29 +213,29 @@ int main()
 
 /// Function Test
     cout <<BOLD << RED << "NOTE: Some functions may not be shown in this section as they have previously been tested or were simply missed when coding." << GO_AWAY << endl;
-    
+
     step();
-    
+
     ///Manufacturer test
     cout << "======================================================================="<<endl;
     cout << BOLD << "Manufacturer test" << GO_AWAY << endl;
     // testing manufacturer functions
-    Manufacturer* t_m1 = new Manufacturer();
-    Manufacturer* t_m2 = new Manufacturer();
+    Manufacturer t_m1;
+    Manufacturer t_m2;
 
     // testing functions
-    t_m1->setName("Boeing");
-    t_m1->setProductType("Commerical Aircraft");
-    t_m1->addColour("Red");
-    t_m1->addColour("Blue");
-    t_m1->addColour("Yellow");
-    t_m1->removeColour("Yellow");
+    t_m1.setName("Boeing");
+    t_m1.setProductType("Commerical Aircraft");
+    t_m1.addColour("Red");
+    t_m1.addColour("Blue");
+    t_m1.addColour("Yellow");
+    t_m1.removeColour("Yellow");
     cout << "Colours:" << endl;
-    t_m1->listColours(); // only red and blue should print
-    vector <string> v = t_m1->getColour_List();
+    t_m1.listColours(); // only red and blue should print
+    vector <string> v = t_m1.getColour_List();
     v.pop_back();
-    t_m1->setColour_List(v);
-    t_m1->manuDetails(); // only Red should print
+    t_m1.setColour_List(v);
+    t_m1.manuDetails(); // only Red should print
 
     // testing operators
     t_m2 = t_m1;
@@ -243,7 +243,7 @@ int main()
     if(t_m1 == t_m2 && !(t_m1 != t_m2)) cout << "if visible then getters, !=, == and = operators work" << endl;
 
     step();
-    
+
     ///Vehicle and Child class testing
     cout << "======================================================================="<<endl;
     cout << BOLD << "Vehicle test" << GO_AWAY << endl;
@@ -278,7 +278,7 @@ int main()
     t_lv1.displayVehicleDetails(); // see if setters work
 
     step();
-        
+
     ///User and Store Manager class testing
     cout << "======================================================================="<<endl;
     cout << BOLD << "User test" << GO_AWAY << endl;

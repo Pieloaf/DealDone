@@ -12,7 +12,7 @@ class Air_Vehicle : public Vehicle
         virtual ~Air_Vehicle();
 
         // user defined constructors
-        Air_Vehicle(Manufacturer* m);
+        Air_Vehicle(Manufacturer m);
 
         /// Function Declarations
         // Generated Accessors and Mutators

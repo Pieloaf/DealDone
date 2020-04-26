@@ -12,7 +12,7 @@ Vehicle::Vehicle()
     vehicle_manu = new Manufacturer; //dynamically creates new object of Manufacturer Class
 }
 
-Vehicle::Vehicle(Manufacturer* m): vehicle_manu(m) // Ensure that the passed in manufacturer is a dynamically creates object
+Vehicle::Vehicle(Manufacturer m) //vehicle_manu(m) // Ensure that the passed in manufacturer is a pointer
 {
     // setting default values
     model_name = "Unamed Vehicle";
@@ -21,11 +21,12 @@ Vehicle::Vehicle(Manufacturer* m): vehicle_manu(m) // Ensure that the passed in 
     vehicle_colour = "No Colour";
     seats = 4;
     price = 0;
+    vehicle_manu = new Manufacturer(m);
 }
 
 Vehicle::~Vehicle()
 {
-    //delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
+    delete vehicle_manu; //deletes the dynamically created manufacturer object to prevent a memory leak
     vehicle_manu = 0;   // sets ptr to 0 to prevent dangling ptr
 }
 
@@ -35,7 +36,7 @@ void Vehicle::displayVehicleDetails(){ // outputs vehicle info in a longer forma
     cout << "Manufacturer: " << vehicle_manu->getName() << endl;
     cout << "Colour: " << vehicle_colour << endl;
     cout << "Price: " << price << endl;
-    cout << "Seat count: " << seats << endl; 
+    cout << "Seat count: " << seats << endl;
     cout << "Description:" << description << endl;
 }
 

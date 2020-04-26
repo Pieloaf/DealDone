@@ -7,7 +7,7 @@ Land_Vehicle::Land_Vehicle(): Vehicle() // iniatlizer list
     transmission = "Undefined";
     mileage = 0;
 }
-Land_Vehicle::Land_Vehicle(Manufacturer* m1): Vehicle(m1) // initializer list
+Land_Vehicle::Land_Vehicle(Manufacturer m1): Vehicle(m1) // initializer list
 {
         Land_Vehicle(); // calls default constructor for default values
 }
@@ -22,7 +22,7 @@ void Land_Vehicle::displayVehicleBasics(){
     cout << BLUE << getYear() << " - " << getVehicleManuName() << " - " <<  getMileage()<< " km" << endl;
     cout << GREN << getPrice() << " €" << NOCOL<< endl;
     cout << "---------"<< endl;
-    
+
 }
 
 void Land_Vehicle::displayVehicleDetails(){ // overwritten function that outputs vehicle data
