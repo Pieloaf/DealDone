@@ -37,7 +37,7 @@ bool operator== (Land_Vehicle &veh1, Land_Vehicle &veh2){ // all data members to
     return (veh1.getDoors() == veh2.getDoors()
              && veh1.getTransmission() == veh2.getTransmission()
              && veh1.getModelName() == veh2.getModelName()
-             && veh1.getVehicleManu() == veh2.getVehicleManu()
+             && *veh1.getVehicleManu() == *veh2.getVehicleManu()
              && veh1.getVehicleColour() == veh2.getVehicleColour()
              && veh1.getPrice() == veh2.getPrice()
              && veh1.getSeats() == veh2.getSeats()
@@ -56,6 +56,8 @@ void Land_Vehicle::operator= (Land_Vehicle &veh1){ // emulates a "true equals" a
     this->setYear(veh1.getYear());
     this->setSeats(veh1.getSeats());
     this->setVehicleManu(veh1.getVehicleManu());
+    this->setPrice(veh1.getPrice());
+
 
     //Land Vehicle data members
     this->setTransmission(veh1.getTransmission());

@@ -6,7 +6,6 @@
 #include <iostream>
 
 #include "Manufacturer.h"
-#include "Vehicle.h"
 
 #include "Colours.h"
 

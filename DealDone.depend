@@ -373,3 +373,64 @@
 1587912925 source:/home/ryan/Downloads/DealDone/src/Vehicle.cpp
 	"Vehicle.h"
 
+1588608665 source:/home/piercel/DealDone/src/Air_Vehicle.cpp
+	"Air_Vehicle.h"
+
+1588459056 /home/piercel/DealDone/include/Air_Vehicle.h
+	<Vehicle.h>
+
+1588556450 /home/piercel/DealDone/include/Vehicle.h
+	<vector>
+	<string>
+	<iostream>
+	"Manufacturer.h"
+	"Colours.h"
+
+1588459056 /home/piercel/DealDone/include/Manufacturer.h
+	<vector>
+	<string>
+	<iostream>
+	"Colours.h"
+
+1588459056 /home/piercel/DealDone/include/Colours.h
+
+1588606254 source:/home/piercel/DealDone/src/Land_Vehicle.cpp
+	"Land_Vehicle.h"
+
+1588459056 /home/piercel/DealDone/include/Land_Vehicle.h
+	<Vehicle.h>
+
+1588459057 source:/home/piercel/DealDone/src/Manufacturer.cpp
+	"Manufacturer.h"
+
+1588459057 source:/home/piercel/DealDone/src/StoreManager.cpp
+	"StoreManager.h"
+
+1588459056 /home/piercel/DealDone/include/StoreManager.h
+	<User.h>
+
+1588549386 /home/piercel/DealDone/include/User.h
+	<iostream>
+	<string>
+	<vector>
+	"Vehicle.h"
+	"Colours.h"
+
+1588459057 source:/home/piercel/DealDone/src/User.cpp
+	"User.h"
+
+1588524475 source:/home/piercel/DealDone/src/Vehicle.cpp
+	"Vehicle.h"
+
+1588609315 source:/home/piercel/DealDone/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	"Vehicle.h"
+	"Air_Vehicle.h"
+	"Land_Vehicle.h"
+	"Manufacturer.h"
+	"User.h"
+	"StoreManager.h"
+
